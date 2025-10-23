@@ -1,0 +1,353 @@
+CRITICAL - 2025-10-12 08:16:32 --> ErrorException: Undefined variable $totalTestimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 149.
+ 1 APPPATH\Views\admin\view_testimonials.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalTestimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 149)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:17:59 --> ErrorException: Undefined variable $testimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 194.
+ 1 APPPATH\Views\admin\view_testimonials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 194)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:23:39 --> ErrorException: Undefined variable $editTestimonial
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 273.
+ 1 APPPATH\Views\admin\view_testimonials.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editTestimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 273)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:25:46 --> ErrorException: Undefined variable $testimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 194.
+ 1 APPPATH\Views\admin\view_testimonials.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 194)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:26:12 --> ErrorException: Undefined variable $editTestimonial
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 276.
+ 1 APPPATH\Views\admin\view_testimonials.php(276): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editTestimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 276)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(13): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:33:56 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 198.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 4 APPPATH\Controllers\admin\Testimonials.php(19): view('admin/view_testimonials', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:38:14 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Controllers\admin\Testimonials.php on line 22.
+ 1 [internal function]: App\Controllers\admin\Testimonials->App\Controllers\admin\{closure}(Object(stdClass))
+ 2 APPPATH\Controllers\admin\Testimonials.php(21): array_filter([...], Object(Closure))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:38:37 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Controllers\admin\Testimonials.php on line 22.
+ 1 [internal function]: App\Controllers\admin\Testimonials->App\Controllers\admin\{closure}(Object(stdClass))
+ 2 APPPATH\Controllers\admin\Testimonials.php(21): array_filter([...], Object(Closure))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:40:55 --> ErrorException: Undefined variable $success
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 79.
+ 1 APPPATH\Views\admin\view_contact_leads.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $success', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 79)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:41:38 --> ErrorException: Undefined variable $totalCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 90.
+ 1 APPPATH\Views\admin\view_contact_leads.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 90)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:41:44 --> ErrorException: Undefined variable $totalCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 90.
+ 1 APPPATH\Views\admin\view_contact_leads.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 90)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 08:56:59 --> ErrorException: Undefined variable $editTestimonial
+[Method: GET, Route: babayaga/AST/admin/add-testimonials]
+in APPPATH\Views\admin\testimonials\view_add_testimonials.php on line 85.
+ 1 APPPATH\Views\admin\testimonials\view_add_testimonials.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editTestimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_add_testimonials.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_add_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/testimonials/view_add_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(34): view('admin/testimonials/view_add_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->add_testimonials()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 09:24:04 --> ErrorException: Undefined array key "customer_review"
+[Method: POST, Route: babayaga/AST/admin/save-testimonials]
+in APPPATH\Controllers\admin\Testimonials.php on line 43.
+ 1 APPPATH\Controllers\admin\Testimonials.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "customer_review"', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Controllers\\admin\\Testimonials.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->save_testimonials()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 09:52:29 --> ErrorException: Undefined variable $totalCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 90.
+ 1 APPPATH\Views\admin\view_contact_leads.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 90)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:07:32 --> ErrorException: Undefined property: stdClass::$title
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\testimonials\view_testimonials.php on line 253.
+ 1 APPPATH\Views\admin\testimonials\view_testimonials.php(253): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$title', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_testimonials.php', 253)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/testimonials/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(30): view('admin/testimonials/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:07:36 --> ErrorException: Undefined property: stdClass::$title
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\testimonials\view_testimonials.php on line 253.
+ 1 APPPATH\Views\admin\testimonials\view_testimonials.php(253): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$title', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_testimonials.php', 253)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/testimonials/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(30): view('admin/testimonials/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:14:08 --> ErrorException: Attempt to read property "customer_name" on null
+[Method: GET, Route: babayaga/AST/admin/edit-testimonials/hEcjbtB1P3vR4R0FqXHV]
+in APPPATH\Views\admin\testimonials\view_edit_testimonials.php on line 33.
+ 1 APPPATH\Views\admin\testimonials\view_edit_testimonials.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "customer_name" on null', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_edit_testimonials.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\testimonials\\view_edit_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/testimonials/view_edit_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(98): view('admin/testimonials/view_edit_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->edit_testimonials('hEcjbtB1P3vR4R0FqXHV')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:27:43 --> ErrorException: Undefined variable $totalCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 90.
+ 1 APPPATH\Views\admin\view_contact_leads.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 90)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:38:40 --> ErrorException: Undefined variable $totalCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 90.
+ 1 APPPATH\Views\admin\view_contact_leads.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 90)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(12): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:01 --> ErrorException: Undefined variable $unreadCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 102.
+ 1 APPPATH\Views\admin\view_contact_leads.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unreadCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(13): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:09 --> ErrorException: Undefined variable $unreadCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 102.
+ 1 APPPATH\Views\admin\view_contact_leads.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unreadCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:11 --> ErrorException: Undefined variable $unreadCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 102.
+ 1 APPPATH\Views\admin\view_contact_leads.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unreadCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:17 --> ErrorException: Undefined variable $unreadCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 102.
+ 1 APPPATH\Views\admin\view_contact_leads.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unreadCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:20 --> ErrorException: Undefined variable $todayCount
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 114.
+ 1 APPPATH\Views\admin\view_contact_leads.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $todayCount', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 114)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:25 --> ErrorException: Undefined variable $filter
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 130.
+ 1 APPPATH\Views\admin\view_contact_leads.php(130): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $filter', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 130)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-12 10:39:45 --> ErrorException: Undefined variable $search
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 145.
+ 1 APPPATH\Views\admin\view_contact_leads.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $search', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 145)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(16): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

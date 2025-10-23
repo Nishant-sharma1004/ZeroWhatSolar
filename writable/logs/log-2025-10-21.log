@@ -1,0 +1,42 @@
+CRITICAL - 2025-10-21 20:06:08 --> ErrorException: Undefined property: stdClass::$category_name
+[Method: GET, Route: blog]
+in APPPATH\Views\view_blog.php on line 103.
+ 1 APPPATH\Views\view_blog.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php', 103)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_blog', [], true)
+ 5 APPPATH\Controllers\Blog.php(18): view('view_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Blog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-21 20:08:23 --> ErrorException: Undefined property: stdClass::$category_name
+[Method: GET, Route: blog]
+in APPPATH\Views\view_blog.php on line 104.
+ 1 APPPATH\Views\view_blog.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php', 104)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_blog', [], true)
+ 5 APPPATH\Controllers\Blog.php(18): view('view_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Blog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-21 20:09:04 --> ErrorException: Undefined property: stdClass::$category
+[Method: GET, Route: blog-detail/91d87bbd-3774-4324-bce1-25e4ed514430]
+in APPPATH\Views\view_blog_detail.php on line 33.
+ 1 APPPATH\Views\view_blog_detail.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog_detail.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog_detail.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_blog_detail', [], true)
+ 5 APPPATH\Controllers\Blog.php(146): view('view_blog_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Blog->blog_detail('91d87bbd-3774-4324-bce1-25e4ed514430')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

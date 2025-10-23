@@ -1,0 +1,82 @@
+CRITICAL - 2025-10-08 00:05:32 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: services]
+in APPPATH\Views\view_services.php on line 105.
+ 1 APPPATH\Views\view_services.php(105): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_services.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_services', [], true)
+ 5 APPPATH\Controllers\Services.php(20): view('view_services', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Services->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-08 00:07:25 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: services]
+in APPPATH\Views\view_services.php on line 105.
+ 1 APPPATH\Views\view_services.php(105): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_services.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_services', [], true)
+ 5 APPPATH\Controllers\Services.php(20): view('view_services', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Services->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-08 00:08:07 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: services]
+in APPPATH\Views\view_services.php on line 105.
+ 1 APPPATH\Views\view_services.php(105): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_services.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_services', [], true)
+ 5 APPPATH\Controllers\Services.php(13): view('view_services', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Services->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Services))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-08 00:24:20 --> TypeError: CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+[Method: GET, Route: pricing]
+in SYSTEMPATH\HTTP\SiteURI.php on line 420.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(394): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(59): CodeIgniter\HTTP\SiteURI->baseUrl(null, null)
+ 3 APPPATH\Views\shared\view_header.php(20): base_url(null)
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_header.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_header', [], true)
+ 7 APPPATH\Views\view_pricing.php(9): view('shared/view_header')
+ 8 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_pricing.php')
+ 9 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_pricing', [], true)
+11 APPPATH\Controllers\Pricing.php(11): view('view_pricing', [...])
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pricing->index()
+13 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pricing))
+14 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-08 00:24:37 --> TypeError: CodeIgniter\HTTP\SiteURI::stringifyRelativePath(): Return value must be of type string, null returned
+[Method: GET, Route: pricing]
+in SYSTEMPATH\HTTP\SiteURI.php on line 420.
+ 1 SYSTEMPATH\HTTP\SiteURI.php(394): CodeIgniter\HTTP\SiteURI->stringifyRelativePath(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(59): CodeIgniter\HTTP\SiteURI->baseUrl(null, null)
+ 3 APPPATH\Views\shared\view_header.php(20): base_url(null)
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_header.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_header', [], true)
+ 7 APPPATH\Views\view_pricing.php(9): view('shared/view_header')
+ 8 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_pricing.php')
+ 9 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_pricing', [], true)
+11 APPPATH\Controllers\Pricing.php(11): view('view_pricing', [...])
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pricing->index()
+13 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pricing))
+14 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

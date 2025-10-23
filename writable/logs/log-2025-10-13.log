@@ -1,0 +1,45 @@
+CRITICAL - 2025-10-13 21:18:01 --> ErrorException: foreach() argument must be of type array|object, int given
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 166.
+ 1 APPPATH\Views\admin\view_contact_leads.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, int given', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php', 166)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_contact_leads.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 5 APPPATH\Controllers\admin\ContactLeads.php(23): view('admin/view_contact_leads', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-13 21:18:19 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/contact-leads]
+in APPPATH\Views\admin\view_contact_leads.php on line 168.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_contact_leads', [], true)
+ 4 APPPATH\Controllers\admin\ContactLeads.php(23): view('admin/view_contact_leads', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\ContactLeads->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\ContactLeads))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-13 23:20:26 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/pricing-packages]
+in APPPATH\Controllers\admin\Pricing.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Pricing->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Pricing))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-13 23:31:24 --> Error: Class "App\Models\admin\Setting_model" not found
+[Method: GET, Route: babayaga/AST/admin/site-settings]
+in APPPATH\Controllers\admin\SiteSettings.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\admin\SiteSettings->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

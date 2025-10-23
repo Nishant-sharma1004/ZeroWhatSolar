@@ -1,0 +1,24 @@
+CRITICAL - 2025-09-30 00:03:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_team.php"
+[Method: GET, Route: team]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_team.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_team', [], true)
+ 3 APPPATH\Controllers\Pages.php(10): view('view_team', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->team()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-30 00:09:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/view_pricing.php"
+[Method: GET, Route: pricing]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/view_pricing.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/view_pricing', [], true)
+ 3 APPPATH\Controllers\Pages.php(20): view('pages/view_pricing', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->pricing()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

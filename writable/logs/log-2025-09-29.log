@@ -1,0 +1,28 @@
+CRITICAL - 2025-09-29 23:36:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/script.php"
+[Method: GET, Route: portfolio]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/script.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/script', [], true)
+ 3 APPPATH\Views\view_portfolio.php(277): view('shared/script')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\teckko\\app\\Views\\view_portfolio.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_portfolio', [], true)
+ 7 APPPATH\Controllers\Portfolio.php(10): view('view_portfolio', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Portfolio->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portfolio))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-29 23:54:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "view_team.php"
+[Method: GET, Route: team]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_team.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_team', [], true)
+ 3 APPPATH\Controllers\Pages.php(10): view('view_team', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->team()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

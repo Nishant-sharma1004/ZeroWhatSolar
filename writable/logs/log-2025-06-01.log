@@ -1,0 +1,116 @@
+CRITICAL - 2025-06-01 11:01:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_script.php"
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_script.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_script', [], true)
+ 3 APPPATH\Views\admin\view_dashboard.php(5): view('shared/admin/view_script')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\view_dashboard.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_dashboard', [], true)
+ 7 APPPATH\Controllers\admin\Dashboard.php(14): view('admin/view_dashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:03:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_admin_header.php"
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_admin_header.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_admin_header', [], true)
+ 3 APPPATH\Views\admin\view_dashboard.php(51): view('shared/admin/view_admin_header')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\view_dashboard.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_dashboard', [], true)
+ 7 APPPATH\Controllers\admin\Dashboard.php(14): view('admin/view_dashboard', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:25:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_order.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_order.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_order', [], true)
+ 3 APPPATH\Controllers\admin\Order.php(14): view('admin/view_order', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:26:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_order.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_order.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_order', [], true)
+ 3 APPPATH\Controllers\admin\Order.php(14): view('admin/view_order', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:26:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_order.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_order.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_order', [], true)
+ 3 APPPATH\Controllers\admin\Order.php(14): view('admin/view_order', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:27:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_order.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_order.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_order', [], true)
+ 3 APPPATH\Controllers\admin\Order.php(14): view('admin/view_order', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 11:27:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_order.php"
+[Method: GET, Route: admin/orders]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_order.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_order', [], true)
+ 3 APPPATH\Controllers\admin\Order.php(14): view('admin/view_order', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 17:52:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/customer/view_aadd_customer.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customer/view_aadd_customer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_aadd_customer', [], true)
+ 3 APPPATH\Controllers\admin\Customer.php(21): view('admin/customer/view_aadd_customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-01 17:52:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/customer/view_aadd_customer.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/customer/view_aadd_customer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_aadd_customer', [], true)
+ 3 APPPATH\Controllers\admin\Customer.php(21): view('admin/customer/view_aadd_customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

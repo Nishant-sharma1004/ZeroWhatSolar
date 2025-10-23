@@ -1,0 +1,166 @@
+CRITICAL - 2025-10-09 00:32:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "adminshared/view_links.php"
+[Method: GET, Route: babayaga/AST/admin/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('adminshared/view_links.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('adminshared/view_links', [], true)
+ 3 APPPATH\Views\admin\view_dashboard.php(5): view('adminshared/view_links')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_dashboard.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_dashboard', [], true)
+ 7 APPPATH\Controllers\admin\Dashboard.php(10): view('admin/view_dashboard')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 00:35:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/view_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/view_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(10): view('admin/view_blog_post')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 00:36:46 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\view_blog_posts.php on line 117.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(10): view('admin/view_blog_posts')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 01:07:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/blog_post/add_blog_post.php"
+[Method: GET, Route: babayaga/AST/admin/add-blog-post]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/blog_post/add_blog_post.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/add_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(20): view('admin/blog_post/add_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->add_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 23:52:53 --> Error: Call to undefined function getPricing()
+[Method: GET, Route: babayaga/AST/admin/pricing-packages]
+in APPPATH\Views\admin\view_pricing.php on line 146.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_pricing', [], true)
+ 4 APPPATH\Controllers\admin\Pricing.php(12): view('admin/view_pricing', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Pricing->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Pricing))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 23:58:55 --> Error: Call to undefined function getSetting()
+[Method: GET, Route: babayaga/AST/admin/site-settings]
+in APPPATH\Views\admin\view_settings.php on line 135.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_settings', [], true)
+ 4 APPPATH\Controllers\admin\SiteSettings.php(12): view('admin/view_settings', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\SiteSettings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SiteSettings))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 23:59:28 --> ArgumentCountError: Too few arguments to function getSetting(), 1 passed in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Views\admin\view_settings.php on line 154 and exactly 2 expected
+[Method: GET, Route: babayaga/AST/admin/site-settings]
+in APPPATH\Views\admin\view_settings.php on line 91.
+ 1 APPPATH\Views\admin\view_settings.php(154): getSetting('gst_number')
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_settings.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_settings', [], true)
+ 5 APPPATH\Controllers\admin\SiteSettings.php(12): view('admin/view_settings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\SiteSettings->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SiteSettings))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-09 23:59:38 --> Error: Call to undefined function getSetting()
+[Method: GET, Route: babayaga/AST/admin/site-settings]
+in APPPATH\Views\admin\view_settings.php on line 135.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_settings', [], true)
+ 4 APPPATH\Controllers\admin\SiteSettings.php(12): view('admin/view_settings', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\SiteSettings->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\SiteSettings))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

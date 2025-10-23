@@ -1,0 +1,382 @@
+CRITICAL - 2025-10-10 00:51:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/shared/scripts.php"
+[Method: GET, Route: babayaga/AST/admin/login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/shared/scripts.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/shared/scripts', [], true)
+ 3 APPPATH\Views\admin\view_login.php(388): view('admin/shared/scripts')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 7 APPPATH\Controllers\admin\Login.php(15): view('admin/view_login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-10 20:45:35 --> mysqli_sql_exception: Unknown column 'category' in 'field list' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `bl...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bl...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bl...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bl...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-10 20:45:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category' in 'field list'
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:id:, :title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:45:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'\', \'dfgf\', \'dfd\', \'dfgd\', \'published\', \'Government Policy\', \'df\', \'dfgf\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'\', \'dfgf\', \'dfd\', \'dfgd\', \'published\', \'Government Policy\', \'df\', \'dfgf\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:id:, :title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:45:35 --> [Caused by] mysqli_sql_exception: Unknown column 'category' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'\', \'dfgf\', \'dfd\', \'dfgd\', \'published\', \'Government Policy\', \'df\', \'dfgf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'\', \'dfgf\', \'dfd\', \'dfgd\', \'published\', \'Government Policy\', \'df\', \'dfgf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'\', \'dfgf\', \'dfd\', \'dfgd\', \'published\', \'Government Policy\', \'df\', \'dfgf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`id`, `title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:id:, :title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-10 20:48:35 --> mysqli_sql_exception: Unknown column 'category' in 'field list' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `bl...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bl...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bl...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bl...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-10 20:48:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category' in 'field list'
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:48:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'Government Policy\', \'sdf\', \'sdfs\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'Government Policy\', \'sdf\', \'sdfs\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:48:35 --> [Caused by] mysqli_sql_exception: Unknown column 'category' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'Government Policy\', \'sdf\', \'sdfs\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'Government Policy\', \'sdf\', \'sdfs\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'Government Policy\', \'sdf\', \'sdfs\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `category`, `featured_image`, `slug`) VALUES (:title:, :excerpt:, :content:, :status:, :category:, :featured_image:, :slug:)', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(14): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(44): App\Models\admin\Blog_model->add_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-10 20:51:59 --> mysqli_sql_exception: Unknown column 'create_at' in 'field list' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `bl...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bl...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bl...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bl...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-10 20:51:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'create_at' in 'field list'
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (:title:, :excerpt:, :content:, :status:, :slug:, :create_at:, :updated_at:, :published_at:)', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:51:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'create_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'sdfs\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'sdfs\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (:title:, :excerpt:, :content:, :status:, :slug:, :create_at:, :updated_at:, :published_at:)', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 20:51:59 --> [Caused by] mysqli_sql_exception: Unknown column 'create_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'sdfs\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'sdfs\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (\'sdfs\', \'sdfs\', \'adgd\', \'published\', \'sdfs\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\', \'2025-10-10 20:51:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `excerpt`, `content`, `status`, `slug`, `create_at`, `updated_at`, `published_at`) VALUES (:title:, :excerpt:, :content:, :status:, :slug:, :create_at:, :updated_at:, :published_at:)', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-10 21:06:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`zero_what`.`blog_posts`, CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `blog_categories` (`id`) ON DELETE SET NULL) in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `bl...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bl...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bl...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bl...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-10 21:06:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`zero_what`.`blog_posts`, CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `blog_categories` (`id`) ON DELETE SET NULL)
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (:title:, :content:, :excerpt:, :category_id:, :featured_image:, :status:, :slug:, :created_at:, :updated_at:, :published_at:)', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:06:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`zero_what`.`blog_posts`, CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `blog_categories` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (\'sdgds\', \'dshsfdg\', \'dfgdsf\', \'Government Policy\', \'sfghdfg\', \'published\', \'sdgds\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (\'sdgds\', \'dshsfdg\', \'dfgdsf\', \'Government Policy\', \'sfghdfg\', \'published\', \'sdgds\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (:title:, :content:, :excerpt:, :category_id:, :featured_image:, :status:, :slug:, :created_at:, :updated_at:, :published_at:)', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:06:38 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`zero_what`.`blog_posts`, CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `blog_categories` (`id`) ON DELETE SET NULL)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (\'sdgds\', \'dshsfdg\', \'dfgdsf\', \'Government Policy\', \'sfghdfg\', \'published\', \'sdgds\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (\'sdgds\', \'dshsfdg\', \'dfgdsf\', \'Government Policy\', \'sfghdfg\', \'published\', \'sdgds\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (\'sdgds\', \'dshsfdg\', \'dfgdsf\', \'Government Policy\', \'sfghdfg\', \'published\', \'sdgds\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\', \'2025-10-10 21:06:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `blog_posts` (`title`, `content`, `excerpt`, `category_id`, `featured_image`, `status`, `slug`, `created_at`, `updated_at`, `published_at`) VALUES (:title:, :content:, :excerpt:, :category_id:, :featured_image:, :status:, :slug:, :created_at:, :updated_at:, :published_at:)', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(12): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(57): App\Models\admin\Blog_model->add_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:40:44 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 24.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:41:07 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 47.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:42:23 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 47.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:42:45 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:43:54 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 21:44:44 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in APPPATH\Views\admin\blog_post\view_blog_posts.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_blog_posts', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): view('admin/blog_post/view_blog_posts', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 23:29:52 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/edit-blog-post/d1908695-e0df-4be1-99d2-d0a6ef3ab17d]
+in APPPATH\Views\admin\blog_post\view_edit_blog_post.php on line 39.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_edit_blog_post', [], true)
+ 4 APPPATH\Controllers\admin\BlogPosts.php(80): view('admin/blog_post/view_edit_blog_post', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('d1908695-e0df-4be1-99d2-d0a6ef3ab17d')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-10 23:39:18 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: babayaga/AST/admin/edit-blog-post/48134c61-6440-4c7f-abf7-4a179009639e]
+in APPPATH\Views\admin\blog_post\view_edit_blog_post.php on line 69.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/blog_post/view_edit_blog_post', [], true)
+ 3 APPPATH\Controllers\admin\BlogPosts.php(80): view('admin/blog_post/view_edit_blog_post', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-10 23:54:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'zero_what', 3306, '', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `bp`.`id...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(21): App\Models\admin\Blog_model->get_blog_posts()
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `bp`.`id...', Array, false)
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(16): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(21): App\Models\admin\Blog_model->get_blog_posts()
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-10-10 23:54:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: babayaga/AST/admin/blog-posts]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `bp`.`id`, `bp`.`title`, `bp`.`url`, `bp`.`excerpt`, `bp`.`status`, `bp`.`slug`, `bc`.`name` as `category`, `bp`.`created_at`
+FROM `blog_posts` as `bp`
+LEFT JOIN `blog_categories` as `bc` ON `bc`.`id` = `bp`.`category_id`
+ORDER BY `bp`.`created_at` DESC', [], false)
+ 3 APPPATH\Models\admin\Blog_model.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\admin\BlogPosts.php(21): App\Models\admin\Blog_model->get_blog_posts()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

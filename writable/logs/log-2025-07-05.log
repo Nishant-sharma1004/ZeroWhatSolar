@@ -1,0 +1,290 @@
+CRITICAL - 2025-07-05 09:07:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_links.php"
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_links.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_links', [], true)
+ 3 APPPATH\Views\admin\customer\view_customers.php(5): view('shared/admin/view_links')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_customers.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_customers', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(20): view('admin/customer/view_customers', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 09:10:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_links.php"
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_links.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_links', [], true)
+ 3 APPPATH\Views\admin\customer\view_customers.php(5): view('shared/admin/view_links')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_customers.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_customers', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(20): view('admin/customer/view_customers', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 09:11:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_footer.php"
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_footer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_footer', [], true)
+ 3 APPPATH\Views\admin\customer\view_customers.php(335): view('shared/admin/view_footer')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_customers.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_customers', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(20): view('admin/customer/view_customers', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 09:11:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_script.php"
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_script.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_script', [], true)
+ 3 APPPATH\Views\admin\customer\view_customers.php(335): view('shared/admin/view_script')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_customers.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_customers', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(20): view('admin/customer/view_customers', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 11:38:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_links.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_links.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_links', [], true)
+ 3 APPPATH\Views\admin\customer\view_add_customer.php(5): view('shared/admin/view_links')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_add_customer.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_add_customer', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(28): view('admin/customer/view_add_customer', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-05 16:43:43 --> mysqli_sql_exception: Table 'aglet_db.agl_users' doesn't exist in D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `ag...', 0)
+#1 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ag...')
+#2 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ag...')
+#3 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ag...', Array, false)
+#4 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Models\admin\Customer_model.php(11): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Controllers\admin\Customer.php(70): App\Models\admin\Customer_model->insert_customer(Array)
+#6 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(933): App\Controllers\admin\Customer->insert_customer()
+#7 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+#8 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-05 16:43:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'aglet_db.agl_users' doesn't exist
+[Method: POST, Route: admin/insert-customer]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (:uuid:, :user_type:, :fname:, :lname:, :email:, :password:, :hash_password:, :add_date:, :update_date:)', [...], false)
+ 2 APPPATH\Models\admin\Customer_model.php(11): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\admin\Customer.php(70): App\Models\admin\Customer_model->insert_customer([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->insert_customer()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:43:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'aglet_db.agl_users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (\'21ff6695-e440-4ef6-baa4-114a138bce5d\', 3, \'Admin\', \'User\', \'admin@gmail.com\', \'123456\', \'$2y$10$aRvIFbSVg0BdUHlaKcV1UOQisid7DvhItZWKIr7plbbTcSx2vrfiO\', \'2025-07-05 16:43:43\', \'2025-07-05 16:43:43\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (\'21ff6695-e440-4ef6-baa4-114a138bce5d\', 3, \'Admin\', \'User\', \'admin@gmail.com\', \'123456\', \'$2y$10$aRvIFbSVg0BdUHlaKcV1UOQisid7DvhItZWKIr7plbbTcSx2vrfiO\', \'2025-07-05 16:43:43\', \'2025-07-05 16:43:43\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (:uuid:, :user_type:, :fname:, :lname:, :email:, :password:, :hash_password:, :add_date:, :update_date:)', [...], false)
+ 4 APPPATH\Models\admin\Customer_model.php(11): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\admin\Customer.php(70): App\Models\admin\Customer_model->insert_customer([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->insert_customer()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:43:43 --> [Caused by] mysqli_sql_exception: Table 'aglet_db.agl_users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (\'21ff6695-e440-4ef6-baa4-114a138bce5d\', 3, \'Admin\', \'User\', \'admin@gmail.com\', \'123456\', \'$2y$10$aRvIFbSVg0BdUHlaKcV1UOQisid7DvhItZWKIr7plbbTcSx2vrfiO\', \'2025-07-05 16:43:43\', \'2025-07-05 16:43:43\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (\'21ff6695-e440-4ef6-baa4-114a138bce5d\', 3, \'Admin\', \'User\', \'admin@gmail.com\', \'123456\', \'$2y$10$aRvIFbSVg0BdUHlaKcV1UOQisid7DvhItZWKIr7plbbTcSx2vrfiO\', \'2025-07-05 16:43:43\', \'2025-07-05 16:43:43\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (\'21ff6695-e440-4ef6-baa4-114a138bce5d\', 3, \'Admin\', \'User\', \'admin@gmail.com\', \'123456\', \'$2y$10$aRvIFbSVg0BdUHlaKcV1UOQisid7DvhItZWKIr7plbbTcSx2vrfiO\', \'2025-07-05 16:43:43\', \'2025-07-05 16:43:43\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `agl_users` (`uuid`, `user_type`, `fname`, `lname`, `email`, `password`, `hash_password`, `add_date`, `update_date`) VALUES (:uuid:, :user_type:, :fname:, :lname:, :email:, :password:, :hash_password:, :add_date:, :update_date:)', [...], false)
+ 5 APPPATH\Models\admin\Customer_model.php(11): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\admin\Customer.php(70): App\Models\admin\Customer_model->insert_customer([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->insert_customer()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-05 16:57:24 --> mysqli_sql_exception: Unknown column 'uuid_id' in 'field list' in D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uuid_id...', 0)
+#1 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id...')
+#2 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id...')
+#3 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id...', Array, false)
+#4 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+#6 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+#7 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+#8 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-05 16:57:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uuid_id' in 'field list'
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 2 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:57:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uuid_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 4 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:57:24 --> [Caused by] mysqli_sql_exception: Unknown column 'uuid_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 5 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-07-05 16:57:48 --> mysqli_sql_exception: Unknown column 'uuid_id' in 'field list' in D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uuid_id...', 0)
+#1 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id...')
+#2 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id...')
+#3 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id...', Array, false)
+#4 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\app\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+#6 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+#7 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+#8 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Downloads\Web Projects\xampp 8.2\htdocs\Aglet\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-05 16:57:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uuid_id' in 'field list'
+[Method: GET, Route: admin/customers]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 2 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:57:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uuid_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 4 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-05 16:57:48 --> [Caused by] mysqli_sql_exception: Unknown column 'uuid_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = 3
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uuid_id`, `user_type`, `fname`, `lname`, `email`, `status`, `add_date`, `update_date`
+FROM `agl_users`
+WHERE `user_type` = :user_type:
+ORDER BY `id` DESC', [...], false)
+ 5 APPPATH\Models\admin\Customer_model.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\Customer.php(20): App\Models\admin\Customer_model->get_customer_list(3)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

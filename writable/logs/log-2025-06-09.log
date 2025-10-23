@@ -1,0 +1,48 @@
+CRITICAL - 2025-06-09 20:39:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_scipt.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_scipt.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_scipt', [], true)
+ 3 APPPATH\Views\admin\customer\view_add_customer.php(266): view('shared/admin/view_scipt')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_add_customer.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_add_customer', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(21): view('admin/customer/view_add_customer', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-09 20:40:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/shared/view_footer.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/shared/view_footer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/shared/view_footer', [], true)
+ 3 APPPATH\Views\admin\customer\view_add_customer.php(266): view('shared/shared/view_footer')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_add_customer.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_add_customer', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(21): view('admin/customer/view_add_customer', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-09 20:40:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "shared/admin/view_script.php"
+[Method: GET, Route: admin/add-customer]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('shared/admin/view_script.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/admin/view_script', [], true)
+ 3 APPPATH\Views\admin\customer\view_add_customer.php(266): view('shared/admin/view_script')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\Downloads\\Web Projects\\xampp 8.2\\htdocs\\Aglet\\app\\Views\\admin\\customer\\view_add_customer.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/customer/view_add_customer', [], true)
+ 7 APPPATH\Controllers\admin\Customer.php(21): view('admin/customer/view_add_customer', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Customer->add_customer()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Customer))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

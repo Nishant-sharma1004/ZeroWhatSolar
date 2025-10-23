@@ -1,0 +1,930 @@
+ERROR - 2025-10-11 00:19:00 --> mysqli_sql_exception: Unknown column 'url' in 'where clause' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4...')
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4...')
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-11 00:19:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'url' in 'where clause'
+[Method: GET, Route: babayaga/AST/admin/edit-blog-post/48134c61-6440-4c7f-abf7-4a179009639e]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:19:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'url' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:19:00 --> [Caused by] mysqli_sql_exception: Unknown column 'url' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 00:19:23 --> mysqli_sql_exception: Unknown column 'url' in 'where clause' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4...')
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4...')
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-11 00:19:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'url' in 'where clause'
+[Method: GET, Route: babayaga/AST/admin/edit-blog-post/48134c61-6440-4c7f-abf7-4a179009639e]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:19:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'url' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:19:23 --> [Caused by] mysqli_sql_exception: Unknown column 'url' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `blog_posts`
+WHERE `url` = \'48134c61-6440-4c7f-abf7-4a179009639e\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `blog_posts`
+WHERE `url` = :url:', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\admin\BlogPosts.php(78): App\Models\admin\Blog_model->get_blog_post_by_id('48134c61-6440-4c7f-abf7-4a179009639e')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->edit_blog_post('48134c61-6440-4c7f-abf7-4a179009639e')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 00:40:39 --> mysqli_sql_exception: Unknown column 'blog_status' in 'field list' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `blog_po...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_po...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_po...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_po...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-11 00:40:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_status' in 'field list'
+[Method: POST, Route: babayaga/AST/admin/update-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:40:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:39\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:39\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:40:39 --> [Caused by] mysqli_sql_exception: Unknown column 'blog_status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:39\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:39\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:39\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-11 00:40:44 --> mysqli_sql_exception: Unknown column 'blog_status' in 'field list' in D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `blog_po...', 0)
+#1 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_po...')
+#2 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_po...')
+#3 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_po...', Array, false)
+#4 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\app\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post(Array)
+#6 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+#7 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+#8 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Documents\My Projects\xampp 8.2\htdocs\zero-what\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-10-11 00:40:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_status' in 'field list'
+[Method: POST, Route: babayaga/AST/admin/update-blog-post]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 2 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:40:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'blog_status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:44\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:44\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 4 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 00:40:44 --> [Caused by] mysqli_sql_exception: Unknown column 'blog_status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:44\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:44\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `blog_posts` SET `title` = \'Complete Guide to Solar Panel Installation in Jaipur 2025\', `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\', `content` = \'<p class=\\"lead\\">Installing solar panels in Jaipur has never been more accessible, thanks to government initiatives and decreasing costs. This comprehensive guide covers everything you need to know about going solar in the Pink City.</p><h3>Why Choose Solar in Jaipur?</h3><p>Jaipur receives excellent solar irradiation throughout the year, making it one of the best cities in India for solar energy generation.</p>\', `excerpt` = \'Everything you need to know about installing solar panels in Jaipur - from government approvals to cost calculations and maintenance tips.\', `category_id` = \'2\', `featured_image` = \'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80\', `blog_status` = \'published\', `slug` = \'complete-guide-to-solar-panel-installation-in-jaipur-2025\', `updated_at` = \'2025-10-11 00:40:44\'
+WHERE `url` = \'91d87bbd-3774-4324-bce1-25e4ed514430\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `blog_posts` SET `title` = :title:, `url` = :url.1:, `content` = :content:, `excerpt` = :excerpt:, `category_id` = :category_id:, `featured_image` = :featured_image:, `blog_status` = :blog_status:, `slug` = :slug:, `updated_at` = :updated_at:
+WHERE `url` = :url:', [...], false)
+ 5 APPPATH\Models\admin\Blog_model.php(49): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\admin\BlogPosts.php(109): App\Models\admin\Blog_model->update_blog_post([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->update_blog_post()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:33:24 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:34:53 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:34:59 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:35:00 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:35:01 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:35:02 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:35:02 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin/login]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:35:06 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:41:42 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:46:15 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:50:54 --> ErrorException: Undefined variable $error
+[Method: GET, Route: babayaga/AST/admin]
+in APPPATH\Views\admin\view_login.php on line 325.
+ 1 APPPATH\Views\admin\view_login.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php', 325)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_login.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_login', [], true)
+ 5 APPPATH\Controllers\admin\Login.php(16): view('admin/view_login')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 07:57:11 --> ErrorException: Undefined variable $success
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\view_projects.php on line 24.
+ 1 APPPATH\Views\admin\view_projects.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $success', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(13): view('admin/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:00:05 --> ErrorException: Undefined variable $projects
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\view_projects.php on line 45.
+ 1 APPPATH\Views\admin\view_projects.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $projects', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(13): view('admin/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:01:47 --> ErrorException: Undefined variable $projects
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\view_projects.php on line 45.
+ 1 APPPATH\Views\admin\view_projects.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $projects', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(13): view('admin/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:02:34 --> ErrorException: Undefined variable $categories
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\view_projects.php on line 194.
+ 1 APPPATH\Views\admin\view_projects.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php', 194)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(13): view('admin/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:10:13 --> Error: Class "App\Models\admin\Projects_model" not found
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Controllers\admin\Projects.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\admin\Projects->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:11:17 --> ErrorException: Undefined variable $totalTestimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 149.
+ 1 APPPATH\Views\admin\view_testimonials.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalTestimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 149)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:22:09 --> ErrorException: fopen(http://localhost/zero-what/http:/localhost/zero-what/public/assets/upload_images/blog/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 184.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/zero-what/http:/localhost/zero-what/public/assets/upload_images/blog/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\system\\HTTP\\Files\\UploadedFile.php', 184)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(184): fopen('http://localhost/zero-what/http:/localhost/zero-what/public/assets/upload_images/blog/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(135): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/zero-what/http:/localhost/zero-what/public/assets/upload_images/blog/')
+ 4 APPPATH\Controllers\admin\BlogPosts.php(60): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/zero-what/http:/localhost/zero-what/public/assets/upload_images/blog/', '1760151129_2b81757c831b871c67ef.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 08:22:35 --> ErrorException: fopen(http://localhost/zero-what/public/assets/upload_images/blog/index.html): Failed to open stream: HTTP wrapper does not support writeable connections
+[Method: POST, Route: babayaga/AST/admin/save-blog-post]
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 184.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://localhost/zero-what/public/assets/upload_images/blog/index.html): Failed to open stream: HTTP wrapper does not support writeable connections', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\system\\HTTP\\Files\\UploadedFile.php', 184)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(184): fopen('http://localhost/zero-what/public/assets/upload_images/blog/index.html', 'x+b')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(135): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhost/zero-what/public/assets/upload_images/blog/')
+ 4 APPPATH\Controllers\admin\BlogPosts.php(60): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhost/zero-what/public/assets/upload_images/blog/', '1760151155_b45f007488a3257e7db9.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\BlogPosts->save_blog_post()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\BlogPosts))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 09:00:18 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\projects\view_projects.php on line 33.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 4 APPPATH\Controllers\admin\Projects.php(20): view('admin/projects/view_projects', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 09:00:18 --> [Caused by] ErrorException: Undefined variable $projects
+in APPPATH\Views\admin\projects\view_projects.php on line 33.
+ 1 APPPATH\Views\admin\projects\view_projects.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $projects', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(20): view('admin/projects/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 09:31:27 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\projects\view_projects.php on line 205.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 4 APPPATH\Controllers\admin\Projects.php(21): view('admin/projects/view_projects', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 09:35:01 --> ErrorException: Undefined variable $editProject
+[Method: GET, Route: babayaga/AST/admin/add-project]
+in APPPATH\Views\admin\projects\view_add_project.php on line 29.
+ 1 APPPATH\Views\admin\projects\view_add_project.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $editProject', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_add_project.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_add_project.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_add_project', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(28): view('admin/projects/view_add_project', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->add_project()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 09:48:57 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/add-project]
+in APPPATH\Views\admin\projects\view_add_project.php on line 90.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_add_project', [], true)
+ 4 APPPATH\Controllers\admin\Projects.php(28): view('admin/projects/view_add_project', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->add_project()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 10:44:02 --> ErrorException: Undefined array key "featured_image"
+[Method: POST, Route: babayaga/AST/admin/save-project]
+in APPPATH\Controllers\admin\Projects.php on line 72.
+ 1 APPPATH\Controllers\admin\Projects.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "featured_image"', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Controllers\\admin\\Projects.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->save_project()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 10:44:28 --> ErrorException: Undefined array key "featured_image"
+[Method: POST, Route: babayaga/AST/admin/save-project]
+in APPPATH\Controllers\admin\Projects.php on line 72.
+ 1 APPPATH\Controllers\admin\Projects.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "featured_image"', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Controllers\\admin\\Projects.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->save_project()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 10:45:21 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\projects\view_projects.php on line 57.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 4 APPPATH\Controllers\admin\Projects.php(20): view('admin/projects/view_projects', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 12:21:32 --> ErrorException: Undefined variable $post
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\projects\view_projects.php on line 111.
+ 1 APPPATH\Views\admin\projects\view_projects.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php', 111)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(20): view('admin/projects/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 12:55:11 --> ErrorException: Undefined variable $totalTestimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 149.
+ 1 APPPATH\Views\admin\view_testimonials.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalTestimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 149)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 12:55:29 --> ErrorException: Undefined variable $totalTestimonials
+[Method: GET, Route: babayaga/AST/admin/testimonials]
+in APPPATH\Views\admin\view_testimonials.php on line 149.
+ 1 APPPATH\Views\admin\view_testimonials.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalTestimonials', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php', 149)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\view_testimonials.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/view_testimonials', [], true)
+ 5 APPPATH\Controllers\admin\Testimonials.php(12): view('admin/view_testimonials', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Testimonials->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Testimonials))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 13:08:00 --> ErrorException: Undefined variable $cout
+[Method: GET, Route: babayaga/AST/admin/projects]
+in APPPATH\Views\admin\projects\view_projects.php on line 62.
+ 1 APPPATH\Views\admin\projects\view_projects.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cout', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php', 62)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\admin\\projects\\view_projects.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/projects/view_projects', [], true)
+ 5 APPPATH\Controllers\admin\Projects.php(21): view('admin/projects/view_projects', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 13:10:55 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: babayaga/AST/admin/edit-project/yaFx7r8LXvaLbCMntYmv]
+in SYSTEMPATH\Database\BaseConnection.php on line 941.
+ 1 SYSTEMPATH\Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\admin\Projects.php(98): CodeIgniter\Model->__call('get_project_by_url', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->edit_project('yaFx7r8LXvaLbCMntYmv')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:46:17 --> ErrorException: Undefined variable $pageTitle
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 3.
+ 1 APPPATH\Views\shared\view_links.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageTitle', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(23): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:48:10 --> ErrorException: Undefined variable $currentSEO
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentSEO', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(24): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:01 --> ErrorException: Undefined array key "description"
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "description"', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(25): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:20 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(26): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:22 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(26): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:23 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(26): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:24 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 6.
+ 1 APPPATH\Views\shared\view_links.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(26): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:49:54 --> ErrorException: Undefined variable $currentSEO
+[Method: GET, Route: /]
+in APPPATH\Views\shared\view_links.php on line 16.
+ 1 APPPATH\Views\shared\view_links.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $currentSEO', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_dashboard.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_dashboard.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_dashboard', [], true)
+ 9 APPPATH\Controllers\Dashboard.php(24): view('view_dashboard', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:50:26 --> ErrorException: Undefined variable $pageTitle
+[Method: GET, Route: about-us]
+in APPPATH\Views\shared\view_links.php on line 3.
+ 1 APPPATH\Views\shared\view_links.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageTitle', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\shared\\view_links.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('shared/view_links', [], true)
+ 5 APPPATH\Views\view_about_us.php(5): view('shared/view_links')
+ 6 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_about_us', [], true)
+ 9 APPPATH\Controllers\AboutUs.php(17): view('view_about_us', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:52:05 --> ErrorException: Undefined variable $testimonial
+[Method: GET, Route: about-us]
+in APPPATH\Views\view_about_us.php on line 195.
+ 1 APPPATH\Views\view_about_us.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php', 195)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_about_us', [], true)
+ 5 APPPATH\Controllers\AboutUs.php(18): view('view_about_us', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:52:26 --> ErrorException: Undefined variable $testimonial
+[Method: GET, Route: about-us]
+in APPPATH\Views\view_about_us.php on line 195.
+ 1 APPPATH\Views\view_about_us.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php', 195)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_about_us', [], true)
+ 5 APPPATH\Controllers\AboutUs.php(18): view('view_about_us', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:52:28 --> ErrorException: Undefined variable $testimonial
+[Method: GET, Route: about-us]
+in APPPATH\Views\view_about_us.php on line 195.
+ 1 APPPATH\Views\view_about_us.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $testimonial', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php', 195)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_about_us.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_about_us', [], true)
+ 5 APPPATH\Controllers\AboutUs.php(18): view('view_about_us', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AboutUs->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AboutUs))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 16:52:56 --> ErrorException: Undefined variable $featuredPost
+[Method: GET, Route: blog]
+in APPPATH\Views\view_blog.php on line 26.
+ 1 APPPATH\Views\view_blog.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $featuredPost', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Views\\view_blog.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('view_blog', [], true)
+ 5 APPPATH\Controllers\Blog.php(12): view('view_blog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Blog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 17:44:59 --> ErrorException: Undefined array key "url"
+[Method: POST, Route: babayaga/AST/admin/update-project]
+in APPPATH\Controllers\admin\Projects.php on line 153.
+ 1 APPPATH\Controllers\admin\Projects.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "url"', 'D:\\Documents\\My Projects\\xampp 8.2\\htdocs\\zero-what\\app\\Controllers\\admin\\Projects.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->update_project()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-11 23:02:47 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: POST, Route: babayaga/AST/admin/update-project]
+in SYSTEMPATH\Database\BaseConnection.php on line 941.
+ 1 SYSTEMPATH\Model.php(714): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(920): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\admin\Projects.php(153): CodeIgniter\Model->__call('update_project', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\admin\Projects->update_project()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\Projects))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
