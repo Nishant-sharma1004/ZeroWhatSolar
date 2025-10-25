@@ -3,7 +3,7 @@
  * Features: Active Nav Link Highlighter & Sticky Navbar on Scroll
 */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     // --- 1. Active Nav Link Highlighter ---
     // Get the current page's path (e.g., "/about.php")
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector('.navbar');
 
     if (navbar) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             // If user scrolls down more than 50px, add a class to the navbar
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -46,33 +46,33 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- 3. Advanced Solar Calculator with Dynamic Pricing ---
     const calculatorForm = document.getElementById('solarCalculator');
     if (calculatorForm) {
-        calculatorForm.addEventListener('submit', function(e) {
+        calculatorForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const fullName = document.getElementById('fullNameCalc').value.trim();
             const phone = document.getElementById('phoneCalc').value.trim();
             const email = document.getElementById('emailCalc').value.trim();
             const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
             const propertyType = document.getElementById('propertyType').value;
             const rooftopArea = parseFloat(document.getElementById('rooftopArea').value) || 0;
-            
+
             // Validate phone number
             if (!/^[0-9]{10}$/.test(phone)) {
                 alert('Please enter a valid 10-digit phone number');
                 document.getElementById('phoneCalc').focus();
                 return;
             }
-            
+
             if (fullName && phone && email && monthlyBill && propertyType) {
                 // Advanced solar calculations with dynamic pricing
                 const unitsPerMonth = monthlyBill / 6.5; // Updated average rate per unit
                 let systemSizeKW = Math.ceil(unitsPerMonth / 120); // 120 units per kW per month
-                
+
                 // Dynamic pricing based on property type and system size
                 let basePricePerKW;
                 let installationMultiplier = 1;
-                
-                switch(propertyType) {
+
+                switch (propertyType) {
                     case 'residential':
                         basePricePerKW = 65000; // Base price for residential
                         if (systemSizeKW <= 3) installationMultiplier = 1.1;
@@ -90,17 +90,17 @@ document.addEventListener("DOMContentLoaded", function() {
                     default:
                         basePricePerKW = 65000;
                 }
-                
+
                 // Calculate pricing
                 const totalSystemCost = systemSizeKW * basePricePerKW * installationMultiplier;
                 const governmentSubsidy = Math.min(78000, systemSizeKW * 18000); // Max ₹78k or ₹18k per kW
                 const finalPrice = totalSystemCost - governmentSubsidy;
-                
+
                 // Calculate savings
                 const monthlySavings = Math.round(monthlyBill * 0.87); // 87% savings
                 const annualSavings = monthlySavings * 12;
                 const paybackPeriod = Math.round((finalPrice / annualSavings) * 10) / 10;
-                
+
                 // Calculate EMI options
                 const emiOptions = {
                     '12months': Math.round(finalPrice / 12),
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     '36months': Math.round(finalPrice / 36),
                     '60months': Math.round(finalPrice / 60)
                 };
-                
+
                 // Display results with enhanced information
                 let resultsHTML = `
                     <div class="alert alert-light">
@@ -153,16 +153,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                     </div>
                 `;
-                
+
                 document.getElementById('calculatorResults').innerHTML = resultsHTML;
                 document.getElementById('calculatorResults').style.display = 'block';
-                
+
                 // Scroll to results
-                document.getElementById('calculatorResults').scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'center' 
+                document.getElementById('calculatorResults').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
                 });
-                
+
                 // Enhanced lead data for CRM integration
                 const leadData = {
                     name: fullName,
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     timestamp: new Date().toISOString(),
                     source: 'website_calculator'
                 };
-                
+
                 console.log('High-Quality Lead Generated:', leadData);
-                
+
                 // Show personalized message
                 setTimeout(() => {
                     alert(`Hi ${fullName}! Your personalized solar solution is ready. A ${systemSizeKW}kW system will save you ₹${monthlySavings.toLocaleString()} monthly. Our expert will call you at ${phone} within 30 minutes with detailed pricing and next steps.`);
@@ -192,31 +192,31 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- 4. Dynamic Pricing Form (for pricing page) ---
     const dynamicPricingForm = document.getElementById('dynamicPricingForm');
     if (dynamicPricingForm) {
-        dynamicPricingForm.addEventListener('submit', function(e) {
+        dynamicPricingForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const fullName = document.getElementById('fullNameDP').value.trim();
             const phone = document.getElementById('phoneDP').value.trim();
             const propertyType = document.getElementById('propertyTypeDP').value;
             const monthlyBill = parseFloat(document.getElementById('monthlyBillDP').value);
             const rooftopArea = parseFloat(document.getElementById('rooftopAreaDP').value) || 0;
             const location = document.getElementById('locationDP').value;
-            
+
             // Validate phone number
             if (!/^[0-9]{10}$/.test(phone)) {
                 alert('Please enter a valid 10-digit phone number');
                 document.getElementById('phoneDP').focus();
                 return;
             }
-            
+
             if (fullName && phone && propertyType && monthlyBill) {
                 // Advanced pricing calculation
                 let basePricePerKW = 62000; // Base price
                 let locationMultiplier = 1;
                 let propertyMultiplier = 1;
-                
+
                 // Location-based pricing (transportation, accessibility)
-                switch(location) {
+                switch (location) {
                     case 'malviya_nagar':
                     case 'vaishali_nagar':
                     case 'c_scheme':
@@ -233,9 +233,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     default:
                         locationMultiplier = 1.02; // Other/remote areas
                 }
-                
+
                 // Property type multiplier
-                switch(propertyType) {
+                switch (propertyType) {
                     case 'apartment':
                         propertyMultiplier = 1.1; // More complex installation
                         break;
@@ -249,29 +249,29 @@ document.addEventListener("DOMContentLoaded", function() {
                         propertyMultiplier = 0.88; // Commercial rates
                         break;
                 }
-                
+
                 // Calculate system requirements
                 const unitsPerMonth = monthlyBill / 6.5;
                 let systemSizeKW = Math.ceil(unitsPerMonth / 120);
-                
+
                 // System size optimization
                 if (rooftopArea > 0) {
                     const maxSystemSize = Math.floor(rooftopArea / 80); // ~80 sq ft per kW
                     systemSizeKW = Math.min(systemSizeKW, maxSystemSize);
                 }
-                
+
                 // Final pricing calculation
                 const pricePerKW = basePricePerKW * locationMultiplier * propertyMultiplier;
                 const totalSystemCost = systemSizeKW * pricePerKW;
                 const governmentSubsidy = Math.min(78000, systemSizeKW * 18000);
                 const finalInvestment = totalSystemCost - governmentSubsidy;
-                
+
                 // Savings calculation
                 const coveragePercentage = Math.min(95, (systemSizeKW * 120) / unitsPerMonth * 100);
                 const monthlySavings = Math.round(monthlyBill * (coveragePercentage / 100));
                 const annualSavings = monthlySavings * 12;
                 const paybackPeriod = Math.round((finalInvestment / annualSavings) * 10) / 10;
-                
+
                 // Display personalized results
                 const resultsHTML = `
                     <div class="alert alert-light text-dark">
@@ -319,31 +319,31 @@ document.addEventListener("DOMContentLoaded", function() {
                         <p class="text-center mt-3 mb-0"><small class="text-muted">* This is a preliminary estimate. Final pricing will be confirmed after site survey.</small></p>
                     </div>
                 `;
-                
+
                 document.getElementById('dynamicPricingResults').innerHTML = resultsHTML;
                 document.getElementById('dynamicPricingResults').style.display = 'block';
-                
+
                 // Scroll to results
-                document.getElementById('dynamicPricingResults').scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'center' 
+                document.getElementById('dynamicPricingResults').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
                 });
-                
+
                 // Track the lead with contact information
                 const leadData = {
                     name: fullName,
                     phone: phone,
-                    propertyType, 
-                    monthlyBill, 
-                    location, 
-                    systemSizeKW, 
+                    propertyType,
+                    monthlyBill,
+                    location,
+                    systemSizeKW,
                     finalInvestment,
                     monthlySavings: monthlySavings,
                     source: 'pricing_calculator',
                     timestamp: new Date().toISOString()
                 };
                 console.log('Dynamic Pricing Lead with Contact Info:', leadData);
-                
+
                 // Show personalized thank you message
                 setTimeout(() => {
                     alert(`Thank you ${fullName}! Your personalized ${systemSizeKW}kW solar solution can save you ₹${monthlySavings.toLocaleString()} monthly. Our solar expert will call you at ${phone} within 2 hours with detailed pricing and next steps.`);
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.5,
         rootMargin: '0px 0px -100px 0px'
     };
-    
+
     const numberObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -377,30 +377,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 const finalNumber = target.textContent;
                 const isRupee = finalNumber.includes('₹');
                 const hasPlus = finalNumber.includes('+');
-                
+
                 let number = parseInt(finalNumber.replace(/[^0-9]/g, ''));
                 let current = 0;
                 const increment = number / 50;
-                
+
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= number) {
                         current = number;
                         clearInterval(timer);
                     }
-                    
+
                     let displayText = Math.floor(current).toString();
                     if (isRupee) displayText = '₹' + displayText + (current >= 100 ? 'Cr' : '');
                     if (hasPlus) displayText += '+';
-                    
+
                     target.textContent = displayText;
                 }, 50);
-                
+
                 numberObserver.unobserve(target);
             }
         });
     }, observerOptions);
-    
+
     // Observe all stat numbers
     document.querySelectorAll('.stat-number').forEach(stat => {
         numberObserver.observe(stat);
@@ -412,30 +412,30 @@ document.addEventListener("DOMContentLoaded", function() {
         // Check if we should show popup
         const currentPage = window.location.pathname.split('/').pop();
         const excludePages = ['contact.php', 'admin'];
-        const shouldShowPopup = !excludePages.some(page => 
+        const shouldShowPopup = !excludePages.some(page =>
             currentPage.includes(page) || window.location.pathname.includes(page)
         );
-        
+
         // Check if popup was already shown in this session
         const popupShown = sessionStorage.getItem('popupQuoteShown');
-        
+
         if (shouldShowPopup && !popupShown) {
             // Show popup after 5 seconds
             setTimeout(() => {
                 const modal = new bootstrap.Modal(popupQuoteModal);
                 modal.show();
-                
+
                 // Mark as shown in session
                 sessionStorage.setItem('popupQuoteShown', 'true');
             }, 5000);
         }
-        
+
         // Handle popup form submission
         const popupForm = document.getElementById('popupQuoteForm');
         if (popupForm) {
-            popupForm.addEventListener('submit', function(e) {
+            popupForm.addEventListener('submit', function (e) {
                 const phone = document.getElementById('popupPhone').value.trim();
-                
+
                 // Validate phone number
                 if (!/^[0-9]{10}$/.test(phone)) {
                     e.preventDefault();
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById('popupPhone').focus();
                     return false;
                 }
-                
+
                 // Show success message on submission
                 setTimeout(() => {
                     alert('Thank you! Your quote request has been submitted. Our solar expert will call you within 2 hours.');
@@ -454,3 +454,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+$(document).on('input', '.phone', function () {
+    // Remove all non-numeric characters
+    let value = this.value.replace(/[^0-9]/g, '');
+
+    // Ensure the first digit starts with 6, 7, 8, or 9
+    if (value.length > 0 && !/^[6-9]/.test(value)) {
+        value = value.replace(/^[^6-9]+/, ''); // remove invalid starting digits
+    }
+
+    // Limit to 10 digits maximum
+    if (value.length > 10) {
+        value = value.slice(0, 10);
+    }
+
+    // Update the input value
+    this.value = value;
+});

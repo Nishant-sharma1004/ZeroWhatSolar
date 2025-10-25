@@ -57,7 +57,7 @@
                             <strong>💰 Special Offer:</strong> Get up to ₹78,000 government subsidy + Zero down payment
                             options available!
                         </div>
-                        <form action="process-form.php" method="POST" id="InquiryForm">
+                        <form action="process-form" method="POST" id="InquiryForm">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name *</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
@@ -69,8 +69,8 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="phone" class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" required
-                                        pattern="[0-9]{10}" placeholder="10-digit mobile number">
+                                    <input type="tel" class="form-control phone" id="phone" name="phone" required
+                                        placeholder="10-digit mobile number">
                                 </div>
                             </div>
                             <div class="row">

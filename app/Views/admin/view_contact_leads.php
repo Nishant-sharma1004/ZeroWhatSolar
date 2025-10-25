@@ -3,68 +3,6 @@
 
 <head>
     <?php echo view('admin/shared/view_links'); ?>
-
-    <style>
-        :root {
-            --primary-blue: #1E3A8A;
-            --accent-blue: #3B82F6;
-            --sidebar-width: 250px;
-        }
-
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: var(--sidebar-width);
-            background: linear-gradient(180deg, var(--primary-blue), var(--accent-blue));
-            color: white;
-            z-index: 1000;
-            overflow-y: auto;
-        }
-
-        .main-content {
-            margin-left: var(--sidebar-width);
-            padding: 2rem;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            padding: 0.75rem 1.5rem;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: white;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-card {
-            transition: transform 0.2s ease;
-            border-left: 4px solid var(--accent-blue);
-        }
-
-        .contact-card:hover {
-            transform: translateY(-2px);
-        }
-
-        .unread {
-            background-color: #fff3cd;
-            border-left-color: #ffc107;
-        }
-
-        .stat-card {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--accent-blue);
-        }
-    </style>
 </head>
 
 <body>
@@ -274,8 +212,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form method="POST" style="display: inline;">
-                        <input type="hidden" name="action" value="delete">
+                    <form method="POST" style="display: inline;" action="delete-contact" id="delete_contact">
                         <input type="hidden" name="id" id="deleteContactId">
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
@@ -285,14 +222,7 @@
     </div>
 
     <?php echo view('admin/shared/view_scripts'); ?>
-
-    <script>
-        function deleteContact(id, name) {
-            document.getElementById('deleteContactId').value = id;
-            document.getElementById('deleteContactName').textContent = name;
-            new bootstrap.Modal(document.getElementById('deleteModal')).show();
-        }
-    </script>
+    <script src="<?php echo ADMIN_ASSETS_PATH . 'js/contact_lead.js?rand=' . RAND; ?>"></script>
 </body>
 
 </html>

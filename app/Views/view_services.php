@@ -32,8 +32,7 @@
                         <?php foreach ($mainServices as $service): ?>
                             <div class="col-lg-4 col-md-6">
                                 <div class="service-card">
-                                    <div class="icon"><i
-                                            class="<?php echo $service['icon'] ?? 'fas fa-solar-panel'; ?>"></i>
+                                    <div class="icon"><i class="<?php echo $service['icon'] ?? 'fas fa-solar-panel'; ?>"></i>
                                     </div>
                                     <h4><?php echo $service['service_name']; ?></h4>
                                     <p class="mb-3"><?php echo $service['description']; ?></p>
@@ -110,8 +109,7 @@
                         <?php foreach ($additionalServices as $service): ?>
                             <div class="col-lg-3 col-md-6">
                                 <div class="service-card h-100">
-                                    <div class="icon"><i
-                                            class="<?php echo $service['icon'] ?? 'fas fa-cog'; ?>"></i></div>
+                                    <div class="icon"><i class="<?php echo $service['icon'] ?? 'fas fa-cog'; ?>"></i></div>
                                     <h5><?php echo $service['service_name']; ?></h5>
                                     <p><?php echo $service['description']; ?></p>
                                 </div>
@@ -157,6 +155,10 @@
         <!-- Service Inquiry Section -->
         <section class="py-5 bg-light">
             <div class="container">
+                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="card shadow border-0">
@@ -177,8 +179,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="servicePhone" class="form-label">Phone Number *</label>
-                                            <input type="tel" class="form-control" id="servicePhone" name="phone"
-                                                pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                                            <input type="tel" class="form-control phone" id="servicePhone" name="phone"
+                                                placeholder="10-digit mobile number" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="serviceEmail" class="form-label">Email Address *</label>

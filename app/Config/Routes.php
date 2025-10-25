@@ -59,6 +59,7 @@ $routes->group('babayaga/AST/admin', $auth, function ($routes) {
 
    /******************************* ContactLead Routes ************************************/
     $routes->get('contact-leads', 'admin\ContactLeads::index');
+    $routes->post('delete-contact', 'admin\ContactLeads::deleteContact');
     
 
 

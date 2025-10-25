@@ -145,7 +145,7 @@ body {
 /* --- Hero Section --- */
 .hero-section {
     position: relative;
-    height: 90vh;
+    height: auto;
     background-size: cover;
     background-position: center;
     color: white;
@@ -170,6 +170,8 @@ body {
     position: relative;
     z-index: 2;
     max-width: 900px;
+    height: auto;
+    padding: 40px;
 }
 
 .gov-affiliation-badge {

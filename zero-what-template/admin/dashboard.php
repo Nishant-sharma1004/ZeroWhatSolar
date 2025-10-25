@@ -1,5 +1,4 @@
 <?php
-<?php
 require_once 'auth.php';
 checkAdminAuth();
 require_once '../config/database.php';

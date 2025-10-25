@@ -231,6 +231,10 @@
         <!-- Quick Inquiry Section -->
         <section class="section-padding bg-light">
             <div class="container">
+                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="card shadow-lg border-0">
@@ -250,8 +254,8 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="aboutPhone" class="form-label">Phone Number *</label>
-                                            <input type="tel" class="form-control" id="aboutPhone" name="phone"
-                                                pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                                            <input type="tel" class="form-control phone" id="aboutPhone" name="phone"
+                                                placeholder="10-digit mobile number" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="aboutEmail" class="form-label">Email Address *</label>

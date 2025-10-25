@@ -25,49 +25,49 @@
                         <!-- Featured Blog Post -->
                         <?php /*if ($featuredPost) { ?>
 <article class="blog-post featured-post mb-5">
-  <div class="row g-4">
-      <div class="col-md-6">
-          <img src="<?php echo $featuredPost['featured_image'] ?: '<?php echo ASSETS_PATH;?>images/download.jpg'; ?>"
-              class="img-fluid rounded" alt="<?php echo $featuredPost['title']; ?>">
-      </div>
-      <div class="col-md-6">
-          <div class="badge bg-primary mb-2">Featured</div>
-          <h3><a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
-                  class="text-decoration-none"><?php echo $featuredPost['title']; ?></a>
-          </h3>
-          <p class="text-muted mb-2">
-              <i
-                  class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($featuredPost['created_at'])); ?>
-              <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
-          </p>
-          <p><?php echo $featuredPost['excerpt'] ?: substr(strip_tags($featuredPost['content']), 0, 150) . '...'; ?>
-          </p>
-          <a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
-              class="btn btn-primary">Read More</a>
-      </div>
-  </div>
+<div class="row g-4">
+ <div class="col-md-6">
+     <img src="<?php echo $featuredPost['featured_image'] ?: '<?php echo ASSETS_PATH;?>images/download.jpg'; ?>"
+         class="img-fluid rounded" alt="<?php echo $featuredPost['title']; ?>">
+ </div>
+ <div class="col-md-6">
+     <div class="badge bg-primary mb-2">Featured</div>
+     <h3><a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
+             class="text-decoration-none"><?php echo $featuredPost['title']; ?></a>
+     </h3>
+     <p class="text-muted mb-2">
+         <i
+             class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($featuredPost['created_at'])); ?>
+         <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
+     </p>
+     <p><?php echo $featuredPost['excerpt'] ?: substr(strip_tags($featuredPost['content']), 0, 150) . '...'; ?>
+     </p>
+     <a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
+         class="btn btn-primary">Read More</a>
+ </div>
+</div>
 </article>
 <?php } else { ?>
 <!-- Fallback static featured post -->
 <article class="blog-post featured-post mb-5">
-  <div class="row g-4">
-      <div class="col-md-6">
-          <img src="<?php echo ASSETS_PATH; ?>images/download (1).jpg"
-              class="img-fluid rounded" alt="Solar Panel Installation Guide">
-      </div>
-      <div class="col-md-6">
-          <div class="badge bg-primary mb-2">Featured</div>
-          <h3><a href="blog-detail.php?id=1" class="text-decoration-none">Complete Guide to
-                  Solar Panel Installation in Jaipur 2024</a></h3>
-          <p class="text-muted mb-2">
-              <i class="fas fa-calendar me-2"></i>January 15, 2024
-              <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
-          </p>
-          <p>Everything you need to know about installing solar panels in Jaipur - from
-              government approvals to cost calculations and maintenance tips.</p>
-          <a href="blog-detail.php?id=1" class="btn btn-primary">Read More</a>
-      </div>
-  </div>
+<div class="row g-4">
+ <div class="col-md-6">
+     <img src="<?php echo ASSETS_PATH; ?>images/download (1).jpg"
+         class="img-fluid rounded" alt="Solar Panel Installation Guide">
+ </div>
+ <div class="col-md-6">
+     <div class="badge bg-primary mb-2">Featured</div>
+     <h3><a href="blog-detail.php?id=1" class="text-decoration-none">Complete Guide to
+             Solar Panel Installation in Jaipur 2024</a></h3>
+     <p class="text-muted mb-2">
+         <i class="fas fa-calendar me-2"></i>January 15, 2024
+         <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
+     </p>
+     <p>Everything you need to know about installing solar panels in Jaipur - from
+         government approvals to cost calculations and maintenance tips.</p>
+     <a href="blog-detail.php?id=1" class="btn btn-primary">Read More</a>
+ </div>
+</div>
 </article>
 <?php } */ ?>
 

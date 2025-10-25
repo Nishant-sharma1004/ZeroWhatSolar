@@ -33,7 +33,8 @@
                                 <div class="badge bg-primary mb-3"><?php echo $post->category_name; ?></div>
                                 <h1 class="display-5 fw-bold mb-3"><?php echo $post->title; ?></h1>
                                 <div class="post-meta text-muted mb-4">
-                                    <span><i class="fas fa-calendar me-2"></i><?php echo formatDate($post->published_at, 'F j, Y'); ?></span>
+                                    <span><i
+                                            class="fas fa-calendar me-2"></i><?php echo formatDate($post->published_at, 'F j, Y'); ?></span>
                                     <span class="ms-4"><i
                                             class="fas fa-user me-2"></i><?php echo $post->author_name; ?></span>
                                     <span class="ms-4"><i class="fas fa-clock me-2"></i>5 min read</span>
@@ -42,8 +43,8 @@
 
                             <!-- Featured Image -->
                             <div class="post-image mb-4">
-                                <img src="<?php echo ASSETS_PATH . 'upload_images/blog/' . $post->featured_image; ?>" class="img-fluid rounded"
-                                    alt="<?php echo $post->title; ?>">
+                                <img src="<?php echo ASSETS_PATH . 'upload_images/blog/' . $post->featured_image; ?>"
+                                    class="img-fluid rounded" alt="<?php echo $post->title; ?>">
                             </div>
 
                             <!-- Post Content -->

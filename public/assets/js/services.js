@@ -17,7 +17,6 @@ function ajaxGet(url, params = {}, onSuccess, onError) {
 }
 
 function ajaxPost(url, formData = {}, onSuccess, onError) {
-    console.log(baseUrl + url);
     $.ajax({
         url: baseUrl + url,
         type: 'POST',
@@ -41,17 +40,20 @@ $('#popupQuoteForm, #InquiryForm').on('submit', function (e) {
 
     let formData = new FormData(this);
     var url = $(this).attr('action');
-
+    var form = this;
     // Send via AJAX
     ajaxPost(url, formData, function (res) {
+        $('html, body').animate({
+            scrollTop: $(form).offset().top - 200
+        }, 'slow');
         $('.alert').removeClass('alert-success alert-danger').addClass(res.msg_class).removeAttr('style');
         $('.msg').html(res.message);
-        $('.fas').removeClass('fa-check-circle fa-exclamation-triangle').addClass(res.icon);
+        $('.btn-close').click();
+        setTimeout(function () {
+            $('.alert').fadeOut('slow');
+        }, 3000);
         if (res.status) {
-            // setTimeout(function () {
-            //     $('.alert').fadeOut('slow');
-            //     window.location.href = res.redirect_url;
-            // }, 3000);
+            $(form).trigger('reset');
         }
     }, function (err) {
         console.error('Form submission failed:', err);

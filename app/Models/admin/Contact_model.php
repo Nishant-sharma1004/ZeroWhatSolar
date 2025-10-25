@@ -62,5 +62,11 @@ class Contact_model extends Model
         $builder->insert($data);
         return $this->db->insertID();
     }
+
+    function update_contact_lead($data){
+        $builder = $this->db->table('contact_submissions');
+        $builder->where('id', $data['id']);
+        return $builder->update($data);
+    }
 }
 ?>

@@ -82,7 +82,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="popupPhone" class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control" id="popupPhone" name="phone" pattern="[0-9]{10}"
+                                <input type="tel" class="form-control phone" id="popupPhone" name="phone" pattern="[0-9]{10}"
                                     placeholder="10-digit mobile number" required>
                             </div>
                             <div class="mb-3">

@@ -34,15 +34,9 @@ class Dashboard extends BaseController
         $lead_score = 0;
         $jsonData = [
             'status' => false,
-            'message' => 'Something went wrong. Please try again.'
+            'message' => 'Something went wrong. Please try again.',
+            'msg_class' => 'alert-danger'
         ];
-
-        // Check that required fields are not empty
-        // if (empty($post['name']) || empty($post['email']) || empty($post['phone']) || empty($post['monthly_bill'])) {
-        //     $form_status = false;
-        //     $jsonData['message'] = 'Please enter all required field.';
-        //     $jsonData['msg_class'] = 'alert-danger';
-        // }
 
         if (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
             $form_status = false;
@@ -92,9 +86,13 @@ class Dashboard extends BaseController
 
             $result = $this->Dashboard_model->insertContact($postData);
             if ($result > 0) {
-                $jsonData['message'] = "<strong>🎉 Thank You!</strong> Your inquiry has been submitted successfully. Our solar experts will contact you within 2 hours with a detailed proposal.";
+                $jsonData = [
+                    'status' => true,
+                    'message' => "<strong>🎉 Thank You!</strong> Your inquiry has been submitted successfully. Our solar experts will contact you within 2 hours with a detailed proposal.",
+                    'msg_class' => 'alert-success'
+                ];
+                $email_status = $this->enquieryEmail($postData, $lead_score);
             }
-            $email_status = $this->enquieryEmail($postData, $lead_score);
         }
 
         echo json_encode($jsonData);
@@ -141,7 +139,7 @@ class Dashboard extends BaseController
         $emailData['lead_score'] = $lead_score;
         // echo '<pre>'; print_r($emailData); die;
         $email_temp = parseTemplate(view('emails/view_enquiery_mail', $emailData), $emailData);
-        
+
         $email->setTo($postData['email']);
         $email->setFrom(FROM_MAIL, FROM_NAME);
         $email->setSubject($subject);

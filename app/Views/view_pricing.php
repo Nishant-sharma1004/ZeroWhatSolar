@@ -16,6 +16,10 @@
 
         <section class="section-padding">
             <div class="container">
+                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <h2 class="section-title">
                     <?php echo $settings['pricing_title'] ?? 'Personalized Solar Pricing for Every Home'; ?>
                 </h2>
@@ -35,18 +39,24 @@
                                 <form action="process-form" method="POST" id="InquiryForm">
                                     <div class="row g-3">
                                         <div class="col-md-6">
-                                            <label class="form-label text-white">Full Name *</label>
-                                            <input type="text" class="form-control" id="fullNameCalc"
+                                            <label for="fullNameCalc" class="form-label text-white">Full Name *</label>
+                                            <input type="text" class="form-control" id="fullNameCalc" name="name"
                                                 placeholder="Your full name" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label text-white">Phone Number *</label>
-                                            <input type="tel" class="form-control" id="phoneCalc"
-                                                placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                                            <label for="phoneCalc" class="form-label text-white">Phone Number *</label>
+                                            <input type="tel" class="form-control phone" id="phoneCalc"
+                                                placeholder="10-digit mobile number" name="phone" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="serviceEmail" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="serviceEmail" name="email"
+                                                required>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">Property Type *</label>
-                                            <select class="form-control" id="propertyTypeDP" required>
+                                            <select class="form-control" id="propertyTypeDP" name="property_type"
+                                                required>
                                                 <option value="">Select Property Type</option>
                                                 <option value="apartment">Apartment/Flat</option>
                                                 <option value="independent_house">Independent House</option>
@@ -55,18 +65,19 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">Monthly Electricity Bill (₹) *</label>
+                                            <label for="monthlyBillDP" class="form-label">Monthly Electricity Bill (₹)
+                                                *</label>
                                             <input type="number" class="form-control" id="monthlyBillDP"
-                                                placeholder="e.g., 3500" required>
+                                                name="monthly_bill" placeholder="e.g., 3500" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">Rooftop Area (sq ft)</label>
+                                            <label for="rooftopAreaDP" class="form-label">Rooftop Area (sq ft)</label>
                                             <input type="number" class="form-control" id="rooftopAreaDP"
-                                                placeholder="e.g., 800">
+                                                placeholder="e.g., 800" name="rooftop_area">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label">Location in Jaipur</label>
-                                            <select class="form-control" id="locationDP">
+                                            <select class="form-control" id="locationDP" name="address">
                                                 <option value="">Select Area</option>
                                                 <option value="malviya_nagar">Malviya Nagar</option>
                                                 <option value="vaishali_nagar">Vaishali Nagar</option>

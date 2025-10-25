@@ -116,6 +116,10 @@
         <!-- Solar Calculator Section -->
         <section id="calculator" class="calculator-section section-padding">
             <div class="container">
+                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="calculator-card">
@@ -131,8 +135,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="servicePhone" class="form-label">Phone Number *</label>
-                                        <input type="tel" class="form-control" id="servicePhone" name="phone"
-                                            pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                                        <input type="tel" class="form-control phone" id="servicePhone" name="phone"
+                                            placeholder="10-digit mobile number" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="serviceEmail" class="form-label">Email Address *</label>
@@ -387,7 +391,8 @@
                                         style="height: 200px; object-fit: cover;">
                                     <div class="card-body">
                                         <div class="badge <?php echo $category_class; ?> mb-2">
-                                            <?php echo $row->category_name; ?></div>
+                                            <?php echo $row->category_name; ?>
+                                        </div>
                                         <h5 class="card-title"><a href="<?php echo base_url('blog-detail/' . $row->url); ?>"
                                                 class="text-decoration-none"><?php echo $row->title; ?></a></h5>
                                         <p class="card-text"><?php echo $row->excerpt; ?></p>
