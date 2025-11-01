@@ -7,6 +7,15 @@ use CodeIgniter\Model;
 class Blog_model extends Model
 {
 
+    function get_blog_count()
+    {
+        $builder = $this->db->table('blog_posts as bp');
+        $builder->select('COUNT(bp.id) as count');
+        $builder->where('bp.status', 1);
+        $query = $builder->get();
+        return $query->getRow()->count;
+    }
+
     function get_blog_posts()
     {
         $builder = $this->db->table('blog_posts as bp');
@@ -27,6 +36,14 @@ class Blog_model extends Model
         return $query->getResult();
     }
     
+    public function checkBlogPost($slug){
+        $builder = $this->db->table('blog_posts');
+        $builder->select('id');
+        $builder->where('slug', $slug);
+        $query = $builder->get();
+        return $query->getRow();
+    }
+
     function add_blog_post($data)
     {
         $builder = $this->db->table('blog_posts');

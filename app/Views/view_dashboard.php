@@ -116,7 +116,7 @@
         <!-- Solar Calculator Section -->
         <section id="calculator" class="calculator-section section-padding">
             <div class="container">
-                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                <div class="alert alert-dismissible fade show" role="alert" style="display: none;">
                     <div class="msg"></div>
                     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>
@@ -126,27 +126,29 @@
                             <h2 class="text-center mb-4 text-white">Calculate Your Solar Savings</h2>
                             <p class="text-center mb-4 text-white opacity-75">Get an instant estimate of your potential
                                 savings with solar energy</p>
-                            <form action="process-form" method="POST" id="InquiryForm">
+                            <form action="process-form" method="POST" id="InquiryForm" class="solarCalculator">
                                 <input type="hidden" name="source" value="services_inquiry">
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label for="serviceName" class="form-label">Full Name *</label>
-                                        <input type="text" class="form-control" id="serviceName" name="name" required>
+                                        <label class="form-label text-white">Full Name *</label>
+                                        <input type="text" class="form-control" id="fullNameCalc"
+                                            placeholder="Your full name" name="name" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="servicePhone" class="form-label">Phone Number *</label>
-                                        <input type="tel" class="form-control phone" id="servicePhone" name="phone"
-                                            placeholder="10-digit mobile number" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="serviceEmail" class="form-label">Email Address *</label>
-                                        <input type="email" class="form-control" id="serviceEmail" name="email"
+                                        <label class="form-label text-white">Phone Number *</label>
+                                        <input type="tel" class="form-control phone" id="phoneCalc"
+                                            placeholder="10-digit mobile number" pattern="[0-9]{10}" name="phone"
                                             required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="serviceType" class="form-label">Service of Interest</label>
-                                        <select class="form-control" id="serviceType" name="service_type">
-                                            <option value="">Select Service</option>
+                                        <label class="form-label text-white">Monthly Electricity Bill (₹)</label>
+                                        <input type="number" class="form-control" id="monthlyBill"
+                                            placeholder="e.g., 3000" name="monthly_bill" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Property Type</label>
+                                        <select class="form-control" id="propertyType" name="property_type" required>
+                                            <option value="">Select Property</option>
                                             <option value="residential">Residential Solar</option>
                                             <option value="commercial">Commercial Solar</option>
                                             <option value="industrial">Industrial Solar</option>
@@ -156,19 +158,19 @@
                                             <option value="consultation">Free Consultation</option>
                                         </select>
                                     </div>
-                                    <div class="col-12">
-                                        <label for="serviceMessage" class="form-label">Your Requirements</label>
-                                        <textarea class="form-control" id="serviceMessage" name="message" rows="3"
-                                            placeholder="Tell us about your energy needs, project requirements, or any specific questions about our services..."></textarea>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Rooftop Area (sq ft)</label>
+                                        <input type="number" class="form-control" id="rooftopArea"
+                                            placeholder="e.g., 500" name="rooftop_area" required>
                                     </div>
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-primary btn-lg px-4">
-                                            <i class="fas fa-comment-dots me-2"></i>Request Service Information
-                                        </button>
-                                        <p class="text-muted mt-2 mb-0">
-                                            <small><i class="fas fa-clock me-1"></i>Our service specialist will
-                                                contact you within 1 hour</small>
-                                        </p>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-white">Email Address *</label>
+                                        <input type="email" class="form-control" id="emailCalc"
+                                            placeholder="your@email.com" name="email" required>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Get FREE Detailed
+                                            Report</button>
                                     </div>
                                 </div>
                             </form>

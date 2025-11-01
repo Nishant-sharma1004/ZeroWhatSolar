@@ -4,6 +4,14 @@ use CodeIgniter\Model;
 
 class Testimonials_model extends Model
 {
+    function get_testimonial_count(){
+        $builder = $this->db->table('testimonials');
+        $builder->select('COUNT(id) as count');
+        $builder->where('status',1);
+        $query = $builder->get();
+        return $query->getRow()->count;
+    }
+
     function get_testimonials(){
         $builder = $this->db->table('testimonials');
         $builder->select('*');

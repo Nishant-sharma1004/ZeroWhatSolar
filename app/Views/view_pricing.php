@@ -16,10 +16,6 @@
 
         <section class="section-padding">
             <div class="container">
-                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
-                    <div class="msg"></div>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                </div>
                 <h2 class="section-title">
                     <?php echo $settings['pricing_title'] ?? 'Personalized Solar Pricing for Every Home'; ?>
                 </h2>
@@ -28,6 +24,11 @@
                 </p>
 
                 <!-- Dynamic Pricing Calculator -->
+
+                <div class="alert  alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <div class="row justify-content-center mb-5">
                     <div class="col-lg-8">
                         <div class="card shadow-lg border-0"

@@ -26,7 +26,7 @@ try {
     // Get recent contact submissions
     $stmt = $db->query("SELECT * FROM contact_submissions ORDER BY created_at DESC LIMIT 5");
     $recentContacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+
 } catch (Exception $e) {
     $blogCount = $projectCount = $testimonialCount = $monthlyLeads = 0;
     $recentContacts = [];

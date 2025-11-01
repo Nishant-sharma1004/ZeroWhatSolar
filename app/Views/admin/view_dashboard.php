@@ -22,6 +22,7 @@
                 <div class="stat-card">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
+                            <div class="stat-number"><?php echo $blogCount; ?></div>
                             <div class="text-muted">Blog Posts</div>
                         </div>
                         <i class="fas fa-blog fa-2x text-primary opacity-50"></i>
@@ -33,6 +34,7 @@
                 <div class="stat-card">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
+                            <div class="stat-number"><?php echo $projectCount; ?></div>
                             <div class="text-muted">Projects</div>
                         </div>
                         <i class="fas fa-project-diagram fa-2x text-primary opacity-50"></i>
@@ -44,6 +46,7 @@
                 <div class="stat-card">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
+                            <div class="stat-number"><?php echo $testimonialCount; ?></div>
                             <div class="text-muted">Testimonials</div>
                         </div>
                         <i class="fas fa-star fa-2x text-primary opacity-50"></i>
@@ -55,6 +58,7 @@
                 <div class="stat-card">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
+                            <div class="stat-number"><?php echo $leadCount; ?></div>
                             <div class="text-muted">Monthly Leads</div>
                         </div>
                         <i class="fas fa-envelope fa-2x text-primary opacity-50"></i>
@@ -79,15 +83,16 @@
                             <div class="activity-item">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <div>
-                                        <strong><?php echo $contact['name'] ?? 'Unknown'; ?></strong>
+                                        <strong><?php echo $contact->name ?? 'Unknown'; ?></strong>
                                         <br>
-                                        <small
-                                            class="text-muted"><?php echo $contact['email'] ?? ''; ?></small>
+                                        <small class="text-muted"><?php echo $contact->email ?? ''; ?></small>
                                         <br>
-                                        <small><?php echo substr($contact['message'] ?? '', 0, 100); ?>...</small>
+                                        <?php if (isset($contact->message) && !empty($contact->message)) { ?>
+                                            <small><?php echo substr($contact->message ?? '', 0, 200); ?>...</small>
+                                        <?php } ?>
                                     </div>
                                     <small class="text-muted">
-                                        <?php echo date('M j, Y g:i A', strtotime($contact['created_at'] ?? 'now')); ?>
+                                        <?php echo formatDate($contact->created_at, 'M j, Y g:i A'); ?>
                                     </small>
                                 </div>
                             </div>
@@ -95,7 +100,7 @@
                     <?php endif; ?>
 
                     <div class="text-center mt-3">
-                        <a href="<?php echo ADMIN_URL . 'contact-leads';?>" class="btn btn-primary">
+                        <a href="<?php echo ADMIN_URL . 'contact-leads'; ?>" class="btn btn-primary">
                             View All Contacts
                         </a>
                     </div>
@@ -110,19 +115,19 @@
                     </h5>
 
                     <div class="d-grid gap-2">
-                        <a href="<?php echo ADMIN_URL . 'add-blog-post';?>" class="btn btn-outline-primary">
+                        <a href="<?php echo ADMIN_URL . 'add-blog-post'; ?>" class="btn btn-outline-primary">
                             <i class="fas fa-plus me-2"></i>Add New Blog Post
                         </a>
-                        <a href="<?php echo ADMIN_URL . 'add-project';?>" class="btn btn-outline-primary">
+                        <a href="<?php echo ADMIN_URL . 'add-project'; ?>" class="btn btn-outline-primary">
                             <i class="fas fa-plus me-2"></i>Add New Project
                         </a>
-                        <a href="<?php echo ADMIN_URL . 'add-testimonials';?>" class="btn btn-outline-primary">
+                        <a href="<?php echo ADMIN_URL . 'add-testimonials'; ?>" class="btn btn-outline-primary">
                             <i class="fas fa-plus me-2"></i>Add Testimonial
                         </a>
-                        <a href="<?php echo ADMIN_URL . 'pricing-packages';?>" class="btn btn-outline-primary">
+                        <a href="<?php echo ADMIN_URL . 'pricing-packages'; ?>" class="btn btn-outline-primary">
                             <i class="fas fa-edit me-2"></i>Update Pricing
                         </a>
-                        <a href="<?php echo ADMIN_URL . 'site-settings';?>" class="btn btn-outline-primary">
+                        <a href="<?php echo ADMIN_URL . 'site-settings'; ?>" class="btn btn-outline-primary">
                             <i class="fas fa-cog me-2"></i>Site Settings
                         </a>
                     </div>

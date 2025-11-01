@@ -80,7 +80,7 @@
                                             installation in Jaipur.</p>
                                     </div>
                                     <div class="col-md-4 text-md-end">
-                                        <a href="contact.php" class="btn btn-primary btn-lg">Get Free Quote</a>
+                                        <a href="<?php echo base_url('contact'); ?>" class="btn btn-primary btn-lg">Get Free Quote</a>
                                     </div>
                                 </div>
                             </div>

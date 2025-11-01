@@ -88,19 +88,19 @@
                         <h3 class="fw-bold text-primary">Our Impact in Numbers</h3>
                         <p class="text-muted">Powering Jaipur's sustainable future, one rooftop at a time</p>
                     </div>
-                    <?php foreach ($stats as $stat): ?>
+                    <?php foreach ($stats as $stat) { ?>
                         <div class="col-lg-3 col-md-6 mb-4">
                             <div class="card border-0 shadow-sm h-100">
                                 <div class="card-body text-center">
                                     <div class="stat-number h2 text-primary fw-bold">
-                                        <?php echo htmlspecialchars($stat['stat_value']); ?>
+                                        <?php echo $stat['stat_value']; ?>
                                     </div>
-                                    <div class="stat-label text-muted"><?php echo htmlspecialchars($stat['stat_label']); ?>
+                                    <div class="stat-label text-muted"><?php echo $stat['stat_label']; ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php } ?>
                 </div>
             </div>
         </section>
@@ -192,41 +192,41 @@
         </section>
 
         <!-- Customer Testimonial Section -->
-        <?php if ($testimonial): ?>
+        <?php if ($testimonial) { ?>
             <section class="py-5 bg-primary text-white">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 text-center">
                             <h3 class="fw-bold mb-4">What Our Customers Say</h3>
                             <div class="mb-4">
-                                <img src="<?php echo htmlspecialchars($testimonial['customer_image'] ?? '<?php echo ASSETS_PATH; ?>images/person1.jpg'); ?>"
+                                <img src="<?php echo ASSETS_PATH . 'upload_images/testimonials/' . $testimonial->customer_image; ?>"
                                     class="rounded-circle mb-3" width="80" height="80"
-                                    alt="<?php echo htmlspecialchars($testimonial['client_name']); ?>"
+                                    alt="<?php echo $testimonial->customer_name; ?>"
                                     style="object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
                             </div>
                             <blockquote class="blockquote">
-                                <p class="lead mb-4">"<?php echo htmlspecialchars($testimonial['testimonial_text']); ?>"</p>
+                                <p class="lead mb-4">"<?php echo $testimonial->testimonial_text; ?>"</p>
                                 <footer class="blockquote-footer">
-                                    <strong><?php echo htmlspecialchars($testimonial['client_name']); ?></strong>
-                                    <?php if ($testimonial['client_designation']): ?>
-                                        <br><small><?php echo htmlspecialchars($testimonial['client_designation']); ?></small>
-                                    <?php endif; ?>
-                                    <?php if ($testimonial['client_company']): ?>
-                                        <br><small><?php echo htmlspecialchars($testimonial['client_company']); ?></small>
-                                    <?php endif; ?>
+                                    <strong><?php echo $testimonial->customer_name; ?></strong>
+                                    <?php if (isset($testimonial->client_designation) && $testimonial->client_designation) { ?>
+                                        <br><small><?php echo $testimonial->client_designation; ?></small>
+                                    <?php } ?>
+                                    <?php if (isset($testimonial->client_company) && $testimonial->client_company) { ?>
+                                        <br><small><?php echo $testimonial->client_company; ?></small>
+                                    <?php } ?>
                                 </footer>
                             </blockquote>
                             <div class="text-center mt-3">
-                                <?php for ($i = 1; $i <= 5; $i++): ?>
+                                <?php for ($i = 1; $i <= 5; $i++) { ?>
                                     <i
-                                        class="fas fa-star<?php echo ($i <= $testimonial['rating']) ? '' : '-o'; ?> text-warning"></i>
-                                <?php endfor; ?>
+                                        class="fas fa-star<?php echo ($i <= $testimonial->rating ? '' : '-o'); ?> text-warning"></i>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        <?php endif; ?>
+        <?php } ?>
 
         <!-- Quick Inquiry Section -->
         <section class="section-padding bg-light">

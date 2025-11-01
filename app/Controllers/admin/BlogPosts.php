@@ -46,41 +46,57 @@ class BlogPosts extends BaseController
 
             $file = $this->request->getFile('featured_image');
             $newName = '';
-            if ($file && $file->isValid() && !$file->hasMoved()) {
-                $newName = $file->getRandomName();
-                $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-
-                if (in_array($file->getClientExtension(), $allowedExtensions)) {
-                    $uploadPath = FCPATH . 'public/assets/upload_images/blog';
-                    if (!is_dir($uploadPath)) {
-                        mkdir($uploadPath, 0755, true); // Create folder if it doesn't exist
-                    }
-                    // echo $uploadPath; die;
-                    $file->move($uploadPath, $newName);
+            if ($file && $file->getError() !== UPLOAD_ERR_NO_FILE && $file->isValid() && !$file->hasMoved()) {
+                $uploadPath = FCPATH . 'public/assets/upload_images/blog/';
+                if (!is_dir($uploadPath)) {
+                    mkdir($uploadPath, 0755, true);
                 }
-            }
 
-            $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $postData['title']));
-            $formData = [
-                'title' => $postData['title'],
-                'url' => randomString(20),
-                'content' => $postData['content'],
-                'excerpt' => $postData['excerpt'],
-                'category_id' => $postData['category'],
-                'featured_image' => $newName,
-                'post_status' => $postData['status'] ?? 'draft',
-                'slug' => $slug,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-                'published_at' => date('Y-m-d H:i:s')
-            ];
-            $result = $this->Blog_model->add_blog_post($formData);
-            if ($result > 0) {
-                $jsonData['status'] = true;
-                $jsonData['message'] = 'Blog post added successfully!';
-                $jsonData['msg_class'] = 'alert-success';
+                // Generate random .webp name
+                $newName = pathinfo($file->getRandomName(), PATHINFO_FILENAME) . '.webp';
+                $tempPath = $file->getTempName();
+                $finalPath = $uploadPath . $newName;
+
+                // Try to create image resource from any format
+                $image = @imagecreatefromstring(file_get_contents($tempPath));
+
+                if ($image !== false) {
+                    // Save as webp with quality 85
+                    imagewebp($image, $finalPath, 85);
+                    imagedestroy($image);
+                }
+
+                $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $postData['title']));
+                $resultCheck = $this->Blog_model->checkBlogPost($slug);
+                if ($resultCheck) {
+                    $jsonData['message'] = 'Blog post with this title already exists!';
+                    $jsonData['msg_class'] = 'alert-danger';
+                } else {
+                    $formData = [
+                        'title' => $postData['title'],
+                        'url' => randomString(20),
+                        'content' => $postData['content'],
+                        'excerpt' => $postData['excerpt'],
+                        'category_id' => $postData['category'],
+                        'featured_image' => $newName,
+                        'post_status' => $postData['status'] ?? 'draft',
+                        'slug' => $slug,
+                        'created_at' => date('Y-m-d H:i:s'),
+                        'updated_at' => date('Y-m-d H:i:s'),
+                        'published_at' => date('Y-m-d H:i:s')
+                    ];
+                    $result = $this->Blog_model->add_blog_post($formData);
+                    if ($result > 0) {
+                        $jsonData['status'] = true;
+                        $jsonData['message'] = 'Blog post added successfully!';
+                        $jsonData['msg_class'] = 'alert-success';
+                    } else {
+                        $jsonData['message'] = 'Something went wrong, please try again!';
+                        $jsonData['msg_class'] = 'alert-danger';
+                    }
+                }
             } else {
-                $jsonData['message'] = 'Something went wrong, please try again!';
+                $jsonData['message'] = 'Featured image is required!';
                 $jsonData['msg_class'] = 'alert-danger';
             }
         }
@@ -112,17 +128,24 @@ class BlogPosts extends BaseController
         if ($form_status) {
             $file = $this->request->getFile('featured_image');
             $newName = '';
-            if ($file && $file->isValid() && !$file->hasMoved()) {
-                $newName = $file->getRandomName();
-                $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+            if ($file && $file->getError() !== UPLOAD_ERR_NO_FILE && $file->isValid() && !$file->hasMoved()) {
+                $uploadPath = FCPATH . 'public/assets/upload_images/blog/';
+                if (!is_dir($uploadPath)) {
+                    mkdir($uploadPath, 0755, true);
+                }
 
-                if (in_array($file->getClientExtension(), $allowedExtensions)) {
-                    $uploadPath = FCPATH . 'public/assets/upload_images/blog';
-                    if (!is_dir($uploadPath)) {
-                        mkdir($uploadPath, 0755, true); // Create folder if it doesn't exist
-                    }
-                    // echo $uploadPath; die;
-                    $file->move($uploadPath, $newName);
+                // Generate random .webp name
+                $newName = pathinfo($file->getRandomName(), PATHINFO_FILENAME) . '.webp';
+                $tempPath = $file->getTempName();
+                $finalPath = $uploadPath . $newName;
+
+                // Try to create image resource from any format
+                $image = @imagecreatefromstring(file_get_contents($tempPath));
+
+                if ($image !== false) {
+                    // Save as webp with quality 85
+                    imagewebp($image, $finalPath, 85);
+                    imagedestroy($image);
                 }
             }
 
@@ -138,9 +161,9 @@ class BlogPosts extends BaseController
                 'slug' => $slug,
                 'updated_at' => date('Y-m-d H:i:s')
             ];
-            
+
             if ($newName == '') {
-                unset($data['featured_image']);
+                unset($formData['featured_image']);
             }
             $result = $this->Blog_model->update_blog_post($formData);
             if ($result) {

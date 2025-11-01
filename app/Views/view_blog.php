@@ -26,47 +26,47 @@
                         <?php /*if ($featuredPost) { ?>
 <article class="blog-post featured-post mb-5">
 <div class="row g-4">
- <div class="col-md-6">
-     <img src="<?php echo $featuredPost['featured_image'] ?: '<?php echo ASSETS_PATH;?>images/download.jpg'; ?>"
-         class="img-fluid rounded" alt="<?php echo $featuredPost['title']; ?>">
- </div>
- <div class="col-md-6">
-     <div class="badge bg-primary mb-2">Featured</div>
-     <h3><a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
-             class="text-decoration-none"><?php echo $featuredPost['title']; ?></a>
-     </h3>
-     <p class="text-muted mb-2">
-         <i
-             class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($featuredPost['created_at'])); ?>
-         <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
-     </p>
-     <p><?php echo $featuredPost['excerpt'] ?: substr(strip_tags($featuredPost['content']), 0, 150) . '...'; ?>
-     </p>
-     <a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
-         class="btn btn-primary">Read More</a>
- </div>
+<div class="col-md-6">
+<img src="<?php echo $featuredPost['featured_image'] ?: '<?php echo ASSETS_PATH;?>images/download.jpg'; ?>"
+class="img-fluid rounded" alt="<?php echo $featuredPost['title']; ?>">
+</div>
+<div class="col-md-6">
+<div class="badge bg-primary mb-2">Featured</div>
+<h3><a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
+   class="text-decoration-none"><?php echo $featuredPost['title']; ?></a>
+</h3>
+<p class="text-muted mb-2">
+<i
+   class="fas fa-calendar me-2"></i><?php echo date('F j, Y', strtotime($featuredPost['created_at'])); ?>
+<i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
+</p>
+<p><?php echo $featuredPost['excerpt'] ?: substr(strip_tags($featuredPost['content']), 0, 150) . '...'; ?>
+</p>
+<a href="blog-detail.php?slug=<?php echo urlencode($featuredPost['slug']); ?>"
+class="btn btn-primary">Read More</a>
+</div>
 </div>
 </article>
 <?php } else { ?>
 <!-- Fallback static featured post -->
 <article class="blog-post featured-post mb-5">
 <div class="row g-4">
- <div class="col-md-6">
-     <img src="<?php echo ASSETS_PATH; ?>images/download (1).jpg"
-         class="img-fluid rounded" alt="Solar Panel Installation Guide">
- </div>
- <div class="col-md-6">
-     <div class="badge bg-primary mb-2">Featured</div>
-     <h3><a href="blog-detail.php?id=1" class="text-decoration-none">Complete Guide to
-             Solar Panel Installation in Jaipur 2024</a></h3>
-     <p class="text-muted mb-2">
-         <i class="fas fa-calendar me-2"></i>January 15, 2024
-         <i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
-     </p>
-     <p>Everything you need to know about installing solar panels in Jaipur - from
-         government approvals to cost calculations and maintenance tips.</p>
-     <a href="blog-detail.php?id=1" class="btn btn-primary">Read More</a>
- </div>
+<div class="col-md-6">
+<img src="<?php echo ASSETS_PATH; ?>images/download (1).jpg"
+class="img-fluid rounded" alt="Solar Panel Installation Guide">
+</div>
+<div class="col-md-6">
+<div class="badge bg-primary mb-2">Featured</div>
+<h3><a href="blog-detail.php?id=1" class="text-decoration-none">Complete Guide to
+   Solar Panel Installation in Jaipur 2024</a></h3>
+<p class="text-muted mb-2">
+<i class="fas fa-calendar me-2"></i>January 15, 2024
+<i class="fas fa-user ms-3 me-2"></i>Solar Expert Team
+</p>
+<p>Everything you need to know about installing solar panels in Jaipur - from
+government approvals to cost calculations and maintenance tips.</p>
+<a href="blog-detail.php?id=1" class="btn btn-primary">Read More</a>
+</div>
 </div>
 </article>
 <?php } */ ?>
@@ -119,68 +119,6 @@
                                     </div>
                                 <?php }
                             } ?>
-
-                            <!-- <div class="col-md-6">
-                                <article class="blog-post card h-100 border-0 shadow-sm">
-                                    <img src="<?php echo ASSETS_PATH; ?>images/download (3).jpg" class="card-img-top"
-                                        alt="Solar Panel Maintenance">
-                                    <div class="card-body">
-                                        <div class="badge bg-warning text-dark mb-2">Maintenance</div>
-                                        <h5 class="card-title"><a href="blog-detail.php?id=3"
-                                                class="text-decoration-none">5 Essential Solar Panel Maintenance
-                                                Tips</a></h5>
-                                        <p class="text-muted small mb-2">
-                                            <i class="fas fa-calendar me-2"></i>January 5, 2024
-                                        </p>
-                                        <p class="card-text">Keep your solar panels performing at peak efficiency with
-                                            these essential maintenance tips specifically for Jaipur's climate
-                                            conditions.</p>
-                                        <a href="blog-detail.php?id=3" class="btn btn-outline-primary btn-sm">Read
-                                            More</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="col-md-6">
-                                <article class="blog-post card h-100 border-0 shadow-sm">
-                                    <img src="<?php echo ASSETS_PATH; ?>images/download (4).jpg" class="card-img-top"
-                                        alt="Solar ROI Calculator">
-                                    <div class="card-body">
-                                        <div class="badge bg-info mb-2">Finance</div>
-                                        <h5 class="card-title"><a href="blog-detail.php?id=4"
-                                                class="text-decoration-none">Solar ROI Calculator: Is Solar Worth It in
-                                                2024?</a></h5>
-                                        <p class="text-muted small mb-2">
-                                            <i class="fas fa-calendar me-2"></i>December 28, 2023
-                                        </p>
-                                        <p class="card-text">Calculate your solar return on investment with our detailed
-                                            analysis. Factors affecting ROI and real customer case studies from Jaipur.
-                                        </p>
-                                        <a href="blog-detail.php?id=4" class="btn btn-outline-primary btn-sm">Read
-                                            More</a>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="col-md-6">
-                                <article class="blog-post card h-100 border-0 shadow-sm">
-                                    <img src="<?php echo ASSETS_PATH; ?>images/images.jpg" class="card-img-top"
-                                        alt="Commercial Solar">
-                                    <div class="card-body">
-                                        <div class="badge bg-primary mb-2">Commercial</div>
-                                        <h5 class="card-title"><a href="blog-detail.php?id=5"
-                                                class="text-decoration-none">Why Jaipur Businesses Are Going Solar</a>
-                                        </h5>
-                                        <p class="text-muted small mb-2">
-                                            <i class="fas fa-calendar me-2"></i>December 20, 2023
-                                        </p>
-                                        <p class="card-text">Discover how local businesses in Jaipur are reducing
-                                            operational costs by 60-80% with commercial solar installations.</p>
-                                        <a href="blog-detail.php?id=5" class="btn btn-outline-primary btn-sm">Read
-                                            More</a>
-                                    </div>
-                                </article>
-                            </div> -->
                         </div>
 
                         <!-- Pagination -->
@@ -279,7 +217,8 @@
                                         <h5 class="card-title">Ready to Go Solar?</h5>
                                         <p class="card-text">Get your personalized quote and start saving on electricity
                                             bills today!</p>
-                                        <a href="contact.php" class="btn btn-light">Get Free Quote</a>
+                                        <a href="<?php echo base_url('contact'); ?>" class="btn btn-light">Get Free
+                                            Quote</a>
                                     </div>
                                 </div>
                             </div>

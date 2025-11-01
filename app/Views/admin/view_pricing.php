@@ -134,8 +134,7 @@
                             <label for="residential_base_price" class="form-label">Base Price (₹)</label>
                             <input type="number" class="form-control" id="residential_base_price"
                                 name="residential_base_price"
-                                value="<?php echo $currentPricing['residential_base_price'] ?? 50000; ?>" min="0"
-                                step="1000">
+                                value="<?php echo $currentPricing['residential_base_price'] ?? 50000; ?>" min="0">
                             <div class="form-text">Fixed installation cost</div>
                         </div>
                     </div>
@@ -144,7 +143,7 @@
                             <label for="residential_price_per_kw" class="form-label">Price per kW (₹)</label>
                             <input type="number" class="form-control" id="residential_price_per_kw"
                                 name="residential_price_per_kw" value="<?php echo $currentPricing['residential_price_per_kw'] ?? 50000;
-                                ; ?>" min="0" step="1000">
+                                ; ?>" min="0">
                             <div class="form-text">Cost per kilowatt</div>
                         </div>
                     </div>
@@ -197,8 +196,7 @@
                             <label for="commercial_base_price" class="form-label">Base Price (₹)</label>
                             <input type="number" class="form-control" id="commercial_base_price"
                                 name="commercial_base_price"
-                                value="<?php echo $currentPricing['commercial_base_price'] ?? 100000; ?>" min="0"
-                                step="1000">
+                                value="<?php echo $currentPricing['commercial_base_price'] ?? 100000; ?>" min="0">
                             <div class="form-text">Fixed installation cost</div>
                         </div>
                     </div>
@@ -207,8 +205,7 @@
                             <label for="commercial_price_per_kw" class="form-label">Price per kW (₹)</label>
                             <input type="number" class="form-control" id="commercial_price_per_kw"
                                 name="commercial_price_per_kw"
-                                value="<?php echo $currentPricing['commercial_price_per_kw'] ?? 45000; ?>" min="0"
-                                step="1000">
+                                value="<?php echo $currentPricing['commercial_price_per_kw'] ?? 45000; ?>" min="0">
                             <div class="form-text">Cost per kilowatt</div>
                         </div>
                     </div>

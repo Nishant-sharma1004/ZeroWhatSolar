@@ -15,6 +15,15 @@ class Projects_model extends Model
         return $query->getResult();
     }
 
+    function get_project_count()
+    {
+        $builder = $this->db->table('projects');
+        $builder->select('COUNT(id) as count');
+        $builder->where('status', '1');
+        $query = $builder->get();
+        return $query->getRow()->count;
+    }
+
     function get_projects()
     {
         $builder = $this->db->table('projects p');

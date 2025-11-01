@@ -100,6 +100,7 @@ class Dashboard extends BaseController
 
     function enquieryEmail($postData, $lead_score)
     {
+        return 'test';
         $email = \Config\Services::email();
         $recipient = "contact@zerowhatsolar.in";
         $subject = "🌟 New Solar Inquiry from " . $postData['name'] . " - Zero What Solar";

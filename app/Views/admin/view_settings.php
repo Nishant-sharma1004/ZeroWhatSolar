@@ -106,7 +106,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
 
-        <form id="update-setting" name="update-setting" action="<?php echo 'update-settings'; ?>">
+        <form id="update-setting" name="update-setting" action="update-settings">
             <!-- Company Information -->
             <div class="settings-card">
                 <h4 class="section-title">

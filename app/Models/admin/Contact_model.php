@@ -19,6 +19,11 @@ class Contact_model extends Model
             $builder->orLike('message', $data['search']);
             $builder->groupEnd();
         }
+
+        if (isset($data['limit'])) {
+            $builder->limit($data['limit']);
+        }
+        
         $builder->orderBy('created_at', 'DESC');
         $query = $builder->get();
         return $query->getResult();
@@ -56,6 +61,16 @@ class Contact_model extends Model
         return $query->getResult();
     }
 
+    function get_monthly_contact()
+    {
+        $builder = $this->db->table('contact_submissions');
+        $builder->select('COUNT(id) as count');
+        $builder->where('status', 1);
+        $builder->where("DATE_FORMAT(created_at, '%Y-%m') = DATE_FORMAT(NOW(), '%Y-%m')");
+        $query = $builder->get();
+        return $query->getRow()->count;
+    }
+
     function save_contact_lead($data)
     {
         $builder = $this->db->table('contact_submissions');
@@ -63,7 +78,8 @@ class Contact_model extends Model
         return $this->db->insertID();
     }
 
-    function update_contact_lead($data){
+    function update_contact_lead($data)
+    {
         $builder = $this->db->table('contact_submissions');
         $builder->where('id', $data['id']);
         return $builder->update($data);

@@ -44,150 +44,150 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // --- 3. Advanced Solar Calculator with Dynamic Pricing ---
-    const calculatorForm = document.getElementById('solarCalculator');
-    if (calculatorForm) {
-        calculatorForm.addEventListener('submit', function (e) {
-            e.preventDefault();
+    // const calculatorForm = document.getElementById('solarCalculator');
+    // if (calculatorForm) {
+    //     calculatorForm.addEventListener('submit', function (e) {
+    //         e.preventDefault();
 
-            const fullName = document.getElementById('fullNameCalc').value.trim();
-            const phone = document.getElementById('phoneCalc').value.trim();
-            const email = document.getElementById('emailCalc').value.trim();
-            const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
-            const propertyType = document.getElementById('propertyType').value;
-            const rooftopArea = parseFloat(document.getElementById('rooftopArea').value) || 0;
+    //         const fullName = document.getElementById('fullNameCalc').value.trim();
+    //         const phone = document.getElementById('phoneCalc').value.trim();
+    //         const email = document.getElementById('emailCalc').value.trim();
+    //         const monthlyBill = parseFloat(document.getElementById('monthlyBill').value);
+    //         const propertyType = document.getElementById('propertyType').value;
+    //         const rooftopArea = parseFloat(document.getElementById('rooftopArea').value) || 0;
 
-            // Validate phone number
-            if (!/^[0-9]{10}$/.test(phone)) {
-                alert('Please enter a valid 10-digit phone number');
-                document.getElementById('phoneCalc').focus();
-                return;
-            }
+    //         // Validate phone number
+    //         if (!/^[0-9]{10}$/.test(phone)) {
+    //             alert('Please enter a valid 10-digit phone number');
+    //             document.getElementById('phoneCalc').focus();
+    //             return;
+    //         }
 
-            if (fullName && phone && email && monthlyBill && propertyType) {
-                // Advanced solar calculations with dynamic pricing
-                const unitsPerMonth = monthlyBill / 6.5; // Updated average rate per unit
-                let systemSizeKW = Math.ceil(unitsPerMonth / 120); // 120 units per kW per month
+    //         if (fullName && phone && email && monthlyBill && propertyType) {
+    //             // Advanced solar calculations with dynamic pricing
+    //             const unitsPerMonth = monthlyBill / 6.5; // Updated average rate per unit
+    //             let systemSizeKW = Math.ceil(unitsPerMonth / 120); // 120 units per kW per month
 
-                // Dynamic pricing based on property type and system size
-                let basePricePerKW;
-                let installationMultiplier = 1;
+    //             // Dynamic pricing based on property type and system size
+    //             let basePricePerKW;
+    //             let installationMultiplier = 1;
 
-                switch (propertyType) {
-                    case 'residential':
-                        basePricePerKW = 65000; // Base price for residential
-                        if (systemSizeKW <= 3) installationMultiplier = 1.1;
-                        else if (systemSizeKW <= 5) installationMultiplier = 1.0;
-                        else installationMultiplier = 0.95;
-                        break;
-                    case 'commercial':
-                        basePricePerKW = 58000; // Slightly lower for commercial
-                        installationMultiplier = 0.9;
-                        break;
-                    case 'industrial':
-                        basePricePerKW = 52000; // Best rates for industrial
-                        installationMultiplier = 0.85;
-                        break;
-                    default:
-                        basePricePerKW = 65000;
-                }
+    //             switch (propertyType) {
+    //                 case 'residential':
+    //                     basePricePerKW = 65000; // Base price for residential
+    //                     if (systemSizeKW <= 3) installationMultiplier = 1.1;
+    //                     else if (systemSizeKW <= 5) installationMultiplier = 1.0;
+    //                     else installationMultiplier = 0.95;
+    //                     break;
+    //                 case 'commercial':
+    //                     basePricePerKW = 58000; // Slightly lower for commercial
+    //                     installationMultiplier = 0.9;
+    //                     break;
+    //                 case 'industrial':
+    //                     basePricePerKW = 52000; // Best rates for industrial
+    //                     installationMultiplier = 0.85;
+    //                     break;
+    //                 default:
+    //                     basePricePerKW = 65000;
+    //             }
 
-                // Calculate pricing
-                const totalSystemCost = systemSizeKW * basePricePerKW * installationMultiplier;
-                const governmentSubsidy = Math.min(78000, systemSizeKW * 18000); // Max ₹78k or ₹18k per kW
-                const finalPrice = totalSystemCost - governmentSubsidy;
+    //             // Calculate pricing
+    //             const totalSystemCost = systemSizeKW * basePricePerKW * installationMultiplier;
+    //             const governmentSubsidy = Math.min(78000, systemSizeKW * 18000); // Max ₹78k or ₹18k per kW
+    //             const finalPrice = totalSystemCost - governmentSubsidy;
 
-                // Calculate savings
-                const monthlySavings = Math.round(monthlyBill * 0.87); // 87% savings
-                const annualSavings = monthlySavings * 12;
-                const paybackPeriod = Math.round((finalPrice / annualSavings) * 10) / 10;
+    //             // Calculate savings
+    //             const monthlySavings = Math.round(monthlyBill * 0.87); // 87% savings
+    //             const annualSavings = monthlySavings * 12;
+    //             const paybackPeriod = Math.round((finalPrice / annualSavings) * 10) / 10;
 
-                // Calculate EMI options
-                const emiOptions = {
-                    '12months': Math.round(finalPrice / 12),
-                    '24months': Math.round(finalPrice / 24),
-                    '36months': Math.round(finalPrice / 36),
-                    '60months': Math.round(finalPrice / 60)
-                };
+    //             // Calculate EMI options
+    //             const emiOptions = {
+    //                 '12months': Math.round(finalPrice / 12),
+    //                 '24months': Math.round(finalPrice / 24),
+    //                 '36months': Math.round(finalPrice / 36),
+    //                 '60months': Math.round(finalPrice / 60)
+    //             };
 
-                // Display results with enhanced information
-                let resultsHTML = `
-                    <div class="alert alert-light">
-                        <h4 class="text-primary mb-3">Your Personalized Solar Solution:</h4>
-                        <div class="row text-center mb-3">
-                            <div class="col-md-3 col-6">
-                                <strong>System Size:</strong><br>
-                                <span class="h5 text-primary">${systemSizeKW} kW</span>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <strong>Monthly Savings:</strong><br>
-                                <span class="h5 text-success">₹${monthlySavings.toLocaleString()}</span>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <strong>Annual Savings:</strong><br>
-                                <span class="h5 text-success">₹${annualSavings.toLocaleString()}</span>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <strong>Payback Period:</strong><br>
-                                <span class="h5 text-info">${paybackPeriod} years</span>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6 class="text-primary">💰 Investment Details:</h6>
-                                <p class="mb-1">Total System Cost: <strong>₹${totalSystemCost.toLocaleString()}</strong></p>
-                                <p class="mb-1 text-success">Government Subsidy: <strong>₹${governmentSubsidy.toLocaleString()}</strong></p>
-                                <p class="mb-3">Final Investment: <strong>₹${finalPrice.toLocaleString()}</strong></p>
-                            </div>
-                            <div class="col-md-6">
-                                <h6 class="text-primary">📊 Easy EMI Options:</h6>
-                                <p class="mb-1">12 months: <strong>₹${emiOptions['12months'].toLocaleString()}/month</strong></p>
-                                <p class="mb-1">24 months: <strong>₹${emiOptions['24months'].toLocaleString()}/month</strong></p>
-                                <p class="mb-1">36 months: <strong>₹${emiOptions['36months'].toLocaleString()}/month</strong></p>
-                                <p class="mb-3">60 months: <strong>₹${emiOptions['60months'].toLocaleString()}/month</strong></p>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <a href="contact.php" class="btn btn-primary btn-lg me-2">Get Detailed Quote</a>
-                            <a href="tel:+919876543210" class="btn btn-outline-primary">Call Now</a>
-                        </div>
-                    </div>
-                `;
+    //             // Display results with enhanced information
+    //             let resultsHTML = `
+    //                 <div class="alert alert-light">
+    //                     <h4 class="text-primary mb-3">Your Personalized Solar Solution:</h4>
+    //                     <div class="row text-center mb-3">
+    //                         <div class="col-md-3 col-6">
+    //                             <strong>System Size:</strong><br>
+    //                             <span class="h5 text-primary">${systemSizeKW} kW</span>
+    //                         </div>
+    //                         <div class="col-md-3 col-6">
+    //                             <strong>Monthly Savings:</strong><br>
+    //                             <span class="h5 text-success">₹${monthlySavings.toLocaleString()}</span>
+    //                         </div>
+    //                         <div class="col-md-3 col-6">
+    //                             <strong>Annual Savings:</strong><br>
+    //                             <span class="h5 text-success">₹${annualSavings.toLocaleString()}</span>
+    //                         </div>
+    //                         <div class="col-md-3 col-6">
+    //                             <strong>Payback Period:</strong><br>
+    //                             <span class="h5 text-info">${paybackPeriod} years</span>
+    //                         </div>
+    //                     </div>
+    //                     <hr>
+    //                     <div class="row">
+    //                         <div class="col-md-6">
+    //                             <h6 class="text-primary">💰 Investment Details:</h6>
+    //                             <p class="mb-1">Total System Cost: <strong>₹${totalSystemCost.toLocaleString()}</strong></p>
+    //                             <p class="mb-1 text-success">Government Subsidy: <strong>₹${governmentSubsidy.toLocaleString()}</strong></p>
+    //                             <p class="mb-3">Final Investment: <strong>₹${finalPrice.toLocaleString()}</strong></p>
+    //                         </div>
+    //                         <div class="col-md-6">
+    //                             <h6 class="text-primary">📊 Easy EMI Options:</h6>
+    //                             <p class="mb-1">12 months: <strong>₹${emiOptions['12months'].toLocaleString()}/month</strong></p>
+    //                             <p class="mb-1">24 months: <strong>₹${emiOptions['24months'].toLocaleString()}/month</strong></p>
+    //                             <p class="mb-1">36 months: <strong>₹${emiOptions['36months'].toLocaleString()}/month</strong></p>
+    //                             <p class="mb-3">60 months: <strong>₹${emiOptions['60months'].toLocaleString()}/month</strong></p>
+    //                         </div>
+    //                     </div>
+    //                     <div class="text-center">
+    //                         <a href="contact.php" class="btn btn-primary btn-lg me-2">Get Detailed Quote</a>
+    //                         <a href="tel:+919876543210" class="btn btn-outline-primary">Call Now</a>
+    //                     </div>
+    //                 </div>
+    //             `;
 
-                document.getElementById('calculatorResults').innerHTML = resultsHTML;
-                document.getElementById('calculatorResults').style.display = 'block';
+    //             document.getElementById('calculatorResults').innerHTML = resultsHTML;
+    //             document.getElementById('calculatorResults').style.display = 'block';
 
-                // Scroll to results
-                document.getElementById('calculatorResults').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
+    //             // Scroll to results
+    //             document.getElementById('calculatorResults').scrollIntoView({
+    //                 behavior: 'smooth',
+    //                 block: 'center'
+    //             });
 
-                // Enhanced lead data for CRM integration
-                const leadData = {
-                    name: fullName,
-                    phone: phone,
-                    email: email,
-                    monthlyBill: monthlyBill,
-                    propertyType: propertyType,
-                    rooftopArea: rooftopArea,
-                    systemSize: systemSizeKW,
-                    estimatedCost: finalPrice,
-                    monthlySavings: monthlySavings,
-                    paybackPeriod: paybackPeriod,
-                    timestamp: new Date().toISOString(),
-                    source: 'website_calculator'
-                };
+    //             // Enhanced lead data for CRM integration
+    //             const leadData = {
+    //                 name: fullName,
+    //                 phone: phone,
+    //                 email: email,
+    //                 monthlyBill: monthlyBill,
+    //                 propertyType: propertyType,
+    //                 rooftopArea: rooftopArea,
+    //                 systemSize: systemSizeKW,
+    //                 estimatedCost: finalPrice,
+    //                 monthlySavings: monthlySavings,
+    //                 paybackPeriod: paybackPeriod,
+    //                 timestamp: new Date().toISOString(),
+    //                 source: 'website_calculator'
+    //             };
 
-                console.log('High-Quality Lead Generated:', leadData);
+    //             console.log('High-Quality Lead Generated:', leadData);
 
-                // Show personalized message
-                setTimeout(() => {
-                    alert(`Hi ${fullName}! Your personalized solar solution is ready. A ${systemSizeKW}kW system will save you ₹${monthlySavings.toLocaleString()} monthly. Our expert will call you at ${phone} within 30 minutes with detailed pricing and next steps.`);
-                }, 1500);
-            }
-        });
-    }
+    //             // Show personalized message
+    //             setTimeout(() => {
+    //                 alert(`Hi ${fullName}! Your personalized solar solution is ready. A ${systemSizeKW}kW system will save you ₹${monthlySavings.toLocaleString()} monthly. Our expert will call you at ${phone} within 30 minutes with detailed pricing and next steps.`);
+    //             }, 1500);
+    //         }
+    //     });
+    // }
 
     // --- 4. Dynamic Pricing Form (for pricing page) ---
     const dynamicPricingForm = document.getElementById('dynamicPricingForm');
@@ -408,27 +408,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- 6. Popup Quote Form Logic ---
     const popupQuoteModal = document.getElementById('popupQuoteModal');
+
     if (popupQuoteModal) {
-        // Check if we should show popup
-        const currentPage = window.location.pathname.split('/').pop();
-        const excludePages = ['contact.php', 'admin'];
-        const shouldShowPopup = !excludePages.some(page =>
-            currentPage.includes(page) || window.location.pathname.includes(page)
-        );
+        const excludePages = ['contact', 'admin'];
 
-        // Check if popup was already shown in this session
-        const popupShown = sessionStorage.getItem('popupQuoteShown');
+        // Function to check if popup should show on this page
+        const shouldShowPopup = () => {
+            const currentPath = window.location.pathname;
+            return !excludePages.some(page => currentPath.includes(page));
+        };
 
-        if (shouldShowPopup && !popupShown) {
-            // Show popup after 5 seconds
-            setTimeout(() => {
-                const modal = new bootstrap.Modal(popupQuoteModal);
-                modal.show();
+        // Function to show popup after 10 seconds
+        const showPopupAfterDelay = () => {
+            if (shouldShowPopup()) {
+                setTimeout(() => {
+                    const modal = new bootstrap.Modal(popupQuoteModal);
+                    modal.show();
+                }, 10000);
+            }
+        };
 
-                // Mark as shown in session
-                sessionStorage.setItem('popupQuoteShown', 'true');
-            }, 5000);
-        }
+        // Show popup after 10s when page first loads
+        showPopupAfterDelay();
+
+        // Detect page route changes (for single-page apps or dynamic routes)
+        window.addEventListener('popstate', showPopupAfterDelay);
+        window.addEventListener('pushstate', showPopupAfterDelay);
+        window.addEventListener('replaceState', showPopupAfterDelay);
+
+        // Optional: re-trigger on link clicks (for normal multi-page sites)
+        document.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A' && e.target.href) {
+                setTimeout(showPopupAfterDelay, 1000); // wait for new page load
+            }
+        });
 
         // Handle popup form submission
         const popupForm = document.getElementById('popupQuoteForm');
@@ -436,21 +449,21 @@ document.addEventListener("DOMContentLoaded", function () {
             popupForm.addEventListener('submit', function (e) {
                 const phone = document.getElementById('popupPhone').value.trim();
 
-                // Validate phone number
-                if (!/^[0-9]{10}$/.test(phone)) {
+                // Validate 10-digit phone number (start with 6–9)
+                if (!/^[6-9][0-9]{9}$/.test(phone)) {
                     e.preventDefault();
-                    alert('Please enter a valid 10-digit phone number');
+                    alert('Please enter a valid 10-digit phone number starting with 6, 7, 8, or 9.');
                     document.getElementById('popupPhone').focus();
                     return false;
                 }
 
-                // Show success message on submission
                 setTimeout(() => {
                     alert('Thank you! Your quote request has been submitted. Our solar expert will call you within 2 hours.');
                 }, 100);
             });
         }
     }
+
 
 });
 

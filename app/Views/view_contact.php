@@ -20,36 +20,10 @@
                 <p class="section-subtitle">Ready to slash your electricity bills? Our solar experts will design a
                     custom solution for your property and calculate your exact savings potential.</p>
 
-                <?php if ($status === 'success'): ?>
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>🎉 Thank You!</strong> Your inquiry has been submitted successfully. Our solar experts will
-                        contact you within 2 hours with a detailed proposal.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                <?php elseif ($status === 'error'): ?>
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong>⚠️ Error:</strong>
-                        <?php
-                        switch ($message) {
-                            case 'invalid_email':
-                                echo 'Please enter a valid email address.';
-                                break;
-                            case 'missing_fields':
-                                echo 'Please fill in all required fields.';
-                                break;
-                            case 'invalid_phone':
-                                echo 'Please enter a valid 10-digit phone number.';
-                                break;
-                            case 'mail_failed':
-                                echo 'Unable to send message. Please try again or call us directly.';
-                                break;
-                            default:
-                                echo 'Something went wrong. Please try again.';
-                        }
-                        ?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                <?php endif; ?>
+                <div class="alert alert-dismissible fade show" role="alert" style="display: none;">
+                    <div class="msg"></div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
                 <div class="row g-5">
                     <div class="col-lg-6">
                         <h4 class="mb-4 text-primary">📋 Get FREE Detailed Quote</h4>

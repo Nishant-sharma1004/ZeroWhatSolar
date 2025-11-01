@@ -24,21 +24,16 @@
                         <?php foreach ($projects as $project) { ?>
                             <div class="col-lg-4 col-md-6">
                                 <div class="project-item">
-                                    <?php if ($project['featured_image']): ?>
-                                        <img src="<?php echo $project['featured_image']; ?>" class="img-fluid"
-                                            alt="<?php echo $project['title']; ?>">
-                                    <?php else: ?>
-                                        <img src="<?php echo ASSETS_PATH; ?>images/download.jpg" class="img-fluid"
-                                            alt="<?php echo $project['title']; ?>">
-                                    <?php endif; ?>
+                                    <img src="<?php echo ASSETS_PATH . 'upload_images/projects/' . $project->featured_image; ?>"
+                                        class="img-fluid" alt="<?php echo $project->title; ?>">
                                     <div class="project-overlay">
-                                        <h5><?php echo $project['title']; ?></h5>
-                                        <p><?php echo $project['location']; ?></p>
+                                        <h5><?php echo $project->title; ?></h5>
+                                        <p><?php echo $project->location; ?></p>
                                         <small class="text-light">
-                                            System: <?php echo number_format($project['system_size_kw'], 1); ?>kW
-                                            <?php if ($project['monthly_savings']): ?>
-                                                | Monthly Savings: ₹<?php echo number_format($project['monthly_savings']); ?>
-                                            <?php endif; ?>
+                                            System: <?php echo number_format($project->system_size_kw, 1); ?>kW
+                                            <?php if ($project->monthly_savings) { ?>
+                                                | Monthly Savings: ₹<?php echo number_format($project->monthly_savings); ?>
+                                            <?php } ?>
                                         </small>
                                     </div>
                                 </div>

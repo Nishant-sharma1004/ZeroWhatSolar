@@ -78,9 +78,9 @@
 
                     <div class="col-md-6">
                         <form method="GET" class="d-flex">
-                            <input type="hidden" name="filter" value="<?php echo htmlspecialchars($filter); ?>">
+                            <input type="hidden" name="filter" value="<?php echo $filter; ?>">
                             <input type="text" name="search" class="form-control me-2" placeholder="Search leads..."
-                                value="<?php echo htmlspecialchars($search); ?>">
+                                value="<?php echo $search; ?>">
                             <button type="submit" class="btn btn-outline-primary">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -107,56 +107,57 @@
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h6 class="mb-0">
                                     <i class="fas fa-user me-2"></i>
-                                    <?php echo htmlspecialchars($contact->name); ?>
+                                    <?php echo $contact->name; ?>
                                     <?php if ($contact->status === 'unread') { ?>
                                         <span class="badge bg-warning ms-2">New</span>
                                     <?php } ?>
                                 </h6>
                                 <small class="text-muted">
-                                    <?php echo date('M j, Y g:i A', strtotime($contact->created_at)); ?>
+                                    <?php echo formatDate($contact->created_at, 'M j, Y g:i A'); ?>
                                 </small>
                             </div>
 
                             <div class="card-body">
                                 <div class="mb-2">
                                     <strong>Email:</strong>
-                                    <a href="mailto:<?php echo htmlspecialchars($contact->email); ?>">
-                                        <?php echo htmlspecialchars($contact->email); ?>
+                                    <a href="mailto:<?php echo $contact->email; ?>">
+                                        <?php echo $contact->email; ?>
                                     </a>
                                 </div>
 
                                 <?php if (!empty($contact->phone)) { ?>
                                     <div class="mb-2">
                                         <strong>Phone:</strong>
-                                        <a href="tel:<?php echo htmlspecialchars($contact->phone); ?>">
-                                            <?php echo htmlspecialchars($contact->phone); ?>
+                                        <a href="tel:<?php echo $contact->phone; ?>">
+                                            <?php echo $contact->phone; ?>
                                         </a>
                                     </div>
                                 <?php } ?>
 
                                 <?php if (!empty($contact->subject)) { ?>
                                     <div class="mb-2">
-                                        <strong>Subject:</strong> <?php echo htmlspecialchars($contact->subject); ?>
+                                        <strong>Subject:</strong> <?php echo $contact->subject; ?>
                                     </div>
                                 <?php } ?>
 
-                                <div class="mb-3">
-                                    <strong>Message:</strong><br>
-                                    <div class="bg-light p-2 rounded">
-                                        <?php echo nl2br(htmlspecialchars($contact->message)); ?>
+                                <?php if (isset($contact->message) && !empty($contact->message)) { ?>
+                                    <div class="mb-3">
+                                        <strong>Message:</strong><br>
+                                        <div class="bg-light p-2 rounded">
+                                            <?php echo substr($contact->message ?? '', 0, 200); ?>...
+                                        </div>
                                     </div>
-                                </div>
-
+                                <?php } ?>
                                 <!-- Additional fields from calculator or form -->
                                 <?php if (!empty($contact->monthly_bill)) { ?>
                                     <div class="row text-center bg-primary bg-opacity-10 p-2 rounded">
                                         <div class="col-4">
                                             <small><strong>Monthly
-                                                    Bill</strong><br>₹<?php echo number_format($contact->monthly_bill); ?></small>
+                                                    Bill</strong><br>₹<?php echo $contact->monthly_bill; ?></small>
                                         </div>
                                         <?php if (!empty($contact->property_type)) { ?>
                                             <div class="col-4">
-                                                <small><strong>Property</strong><br><?php echo htmlspecialchars($contact->property_type); ?></small>
+                                                <small><strong>Property</strong><br><?php echo $contact->property_type; ?></small>
                                             </div>
                                         <?php } ?>
                                         <?php if (!empty($contact->system_size)) { ?>
@@ -180,13 +181,13 @@
                                         </form>
                                     <?php } ?>
 
-                                    <a href="mailto:<?php echo htmlspecialchars($contact->email); ?>?subject=Re: Solar Inquiry&body=Dear <?php echo htmlspecialchars($contact->name); ?>,%0A%0AThank you for your interest in Zero What Solar..."
+                                    <a href="mailto:<?php echo $contact->email; ?>?subject=Re: Solar Inquiry&body=Dear <?php echo $contact->name; ?>,%0A%0AThank you for your interest in Zero What Solar..."
                                         class="btn btn-outline-primary">
                                         <i class="fas fa-reply me-1"></i>Reply
                                     </a>
 
                                     <button type="button" class="btn btn-outline-danger"
-                                        onclick="deleteContact(<?php echo $contact->id; ?>, '<?php echo htmlspecialchars($contact->name); ?>')">
+                                        onclick="deleteContact(<?php echo $contact->id; ?>, '<?php echo $contact->name; ?>')">
                                         <i class="fas fa-trash me-1"></i>Delete
                                     </button>
                                 </div>
