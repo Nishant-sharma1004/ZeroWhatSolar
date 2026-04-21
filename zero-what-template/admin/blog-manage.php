@@ -9,7 +9,7 @@ $success = $error = '';
 // Handle form submissions
 if ($_POST) {
     $action = $_POST['action'] ?? '';
-    
+
     if ($action === 'add' || $action === 'edit') {
         $title = trim($_POST['title'] ?? '');
         $content = trim($_POST['content'] ?? '');
@@ -18,7 +18,7 @@ if ($_POST) {
         $featured_image = trim($_POST['featured_image'] ?? '');
         $status = $_POST['status'] ?? 'draft';
         $slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-', $title));
-        
+
         if (empty($title) || empty($content)) {
             $error = 'Title and content are required!';
         } else {
@@ -45,7 +45,7 @@ if ($_POST) {
             }
         }
     }
-    
+
     if ($action === 'delete') {
         $id = $_POST['id'] ?? 0;
         try {
@@ -76,6 +76,7 @@ $isEditMode = !empty($editPost);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,9 +89,11 @@ $isEditMode = !empty($editPost);
             --accent-blue: #3B82F6;
             --sidebar-width: 250px;
         }
-        
-        body { background-color: #f8f9fa; }
-        
+
+        body {
+            background-color: #f8f9fa;
+        }
+
         .sidebar {
             position: fixed;
             top: 0;
@@ -102,23 +105,25 @@ $isEditMode = !empty($editPost);
             z-index: 1000;
             overflow-y: auto;
         }
-        
+
         .main-content {
             margin-left: var(--sidebar-width);
             padding: 2rem;
         }
-        
+
         .nav-link {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             padding: 0.75rem 1.5rem;
         }
-        
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: white;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
+
 <body>
     <?php include 'includes/sidebar.php'; ?>
     <!-- Main Content -->
@@ -131,21 +136,21 @@ $isEditMode = !empty($editPost);
                 </a>
             <?php endif; ?>
         </div>
-        
+
         <?php if ($success): ?>
             <div class="alert alert-success alert-dismissible fade show">
                 <?php echo htmlspecialchars($success); ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         <?php endif; ?>
-        
+
         <?php if ($error): ?>
             <div class="alert alert-danger alert-dismissible fade show">
                 <?php echo htmlspecialchars($error); ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         <?php endif; ?>
-        
+
         <?php if ($isAddMode || $isEditMode): ?>
             <!-- Add/Edit Form -->
             <div class="card">
@@ -161,26 +166,26 @@ $isEditMode = !empty($editPost);
                         <?php if ($isEditMode): ?>
                             <input type="hidden" name="id" value="<?php echo $editPost['id']; ?>">
                         <?php endif; ?>
-                        
+
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="mb-3">
                                     <label for="title" class="form-label">Title *</label>
-                                    <input type="text" class="form-control" id="title" name="title" 
-                                           value="<?php echo htmlspecialchars($editPost['title'] ?? ''); ?>" required>
+                                    <input type="text" class="form-control" id="title" name="title"
+                                        value="<?php echo htmlspecialchars($editPost['title'] ?? ''); ?>" required>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="excerpt" class="form-label">Excerpt</label>
                                     <textarea class="form-control" id="excerpt" name="excerpt" rows="3"><?php echo htmlspecialchars($editPost['excerpt'] ?? ''); ?></textarea>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="content" class="form-label">Content *</label>
                                     <textarea class="form-control" id="content" name="content" rows="15"><?php echo htmlspecialchars($editPost['content'] ?? ''); ?></textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="status" class="form-label">Status</label>
@@ -189,7 +194,7 @@ $isEditMode = !empty($editPost);
                                         <option value="published" <?php echo ($editPost['status'] ?? '') === 'published' ? 'selected' : ''; ?>>Published</option>
                                     </select>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="category" class="form-label">Category</label>
                                     <select class="form-control" id="category" name="category">
@@ -200,15 +205,15 @@ $isEditMode = !empty($editPost);
                                         <option value="Technology" <?php echo ($editPost['category'] ?? '') === 'Technology' ? 'selected' : ''; ?>>Technology</option>
                                     </select>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="featured_image" class="form-label">Featured Image URL</label>
-                                    <input type="url" class="form-control" id="featured_image" name="featured_image" 
-                                           value="<?php echo htmlspecialchars($editPost['featured_image'] ?? ''); ?>">
+                                    <input type="url" class="form-control" id="featured_image" name="featured_image"
+                                        value="<?php echo htmlspecialchars($editPost['featured_image'] ?? ''); ?>">
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="d-flex gap-2">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-save me-2"></i>
@@ -269,8 +274,8 @@ $isEditMode = !empty($editPost);
                                                     <a href="?edit=<?php echo $post['id']; ?>" class="btn btn-outline-primary">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    <button type="button" class="btn btn-outline-danger" 
-                                                            onclick="deletePost(<?php echo $post['id']; ?>, '<?php echo htmlspecialchars($post['title']); ?>')">
+                                                    <button type="button" class="btn btn-outline-danger"
+                                                        onclick="deletePost(<?php echo $post['id']; ?>, '<?php echo htmlspecialchars($post['title']); ?>')">
                                                         <i class="fas fa-trash"></i>
                                                     </button>
                                                 </div>
@@ -285,7 +290,7 @@ $isEditMode = !empty($editPost);
             </div>
         <?php endif; ?>
     </div>
-    
+
     <!-- Delete Confirmation Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1">
         <div class="modal-dialog">
@@ -309,7 +314,7 @@ $isEditMode = !empty($editPost);
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function deletePost(id, title) {
@@ -319,4 +324,5 @@ $isEditMode = !empty($editPost);
         }
     </script>
 </body>
+
 </html>
